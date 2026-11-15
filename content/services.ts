@@ -1,0 +1,82 @@
+export type Service = {
+  slug: string;
+  title: string;
+  summary: string;
+  description: string;
+  includes: string[];
+  image: string;
+  imageAlt: string;
+  cta: { label: string; href: string };
+};
+
+export const services: Service[] = [
+  {
+    slug: "flat-developers",
+    title: "Flat development",
+    summary: "Thoughtfully planned 2 and 3 BHK apartments across Chennai.",
+    description: "Explore 2 & 3 BHK flats in Ambattur and across Chennai.",
+    includes: ["11 Chennai locations", "Layouts and site visits"],
+    image: "/images/services/flats.webp",
+    imageAlt: "Illustrative low-rise Chennai apartment development with shaded balconies and a paved frontage",
+    cta: { label: "Explore our flats", href: "/projects" },
+  },
+  {
+    slug: "building-contractor",
+    title: "House construction",
+    summary: "Plan and build your home with a team you can meet.",
+    description: "Villa construction in Chennai and house construction in Ambattur, from planning to handover.",
+    includes: ["Plot and budget review", "Planning and progress updates"],
+    image: "/images/services/construction.webp",
+    imageAlt: "Illustrative engineers reviewing plans at a low-rise house construction site in Chennai",
+    cta: { label: "Plan your build", href: "/contact" },
+  },
+  {
+    slug: "interior-services",
+    title: "Interior services",
+    summary: "Interiors shaped around your home and everyday life.",
+    description: "Home interior planning in Chennai, shaped around your style and budget.",
+    includes: ["Room layouts", "Materials and finishes"],
+    image: "/images/services/interiors.webp",
+    imageAlt: "Illustrative interior planning for a practical Indian family living and dining room",
+    cta: { label: "Plan your interiors", href: "/contact" },
+  },
+  {
+    slug: "joint-venture",
+    title: "Joint ventures",
+    summary: "Explore the development possibilities for your land.",
+    description: "Explore a residential development partnership for your land in Chennai.",
+    includes: ["Site feasibility review", "Individual partnership terms"],
+    image: "/images/services/jointventure.webp",
+    imageAlt: "Illustrative landowner consultation with site drawings and a residential development model",
+    cta: { label: "Discuss a joint venture", href: "/contact" },
+  },
+];
+
+export const process = [
+  { title: "Tell us what you need", text: "Location, size and budget, on WhatsApp or the enquiry form." },
+  { title: "Get matching options", text: "We share projects that fit your preferred location and home size." },
+  { title: "Visit the site", text: "Meet our team and see the home in person." },
+  { title: "Book your home", text: "We guide you through the next steps." },
+];
+
+export const reasons = [
+  { title: "Local to Ambattur", text: "Our office is in Kallikuppam, Ambattur. We know the area." },
+  { title: "10 years of experience", text: "A decade of building homes in Chennai." },
+  { title: "Clear guidance", text: "Get straightforward answers from a team you can meet in person." },
+  { title: "Easy to reach", text: "WhatsApp, call or book a site visit, any day." },
+];
+
+/** Consultation steps for all four services, without assuming a property purchase. */
+export const serviceProcess = [
+  { title: "Share your plans", text: "Tell us your location, needs and budget." },
+  { title: "Define the scope", text: "Review the site and work involved." },
+  { title: "Review the details", text: "Discuss the estimate and next steps." },
+  { title: "Get started", text: "Agree on the scope and terms." },
+];
+
+export const serviceFaqs = [
+  { q: "Can you build a home on my plot?", a: "Yes. Share your Chennai plot location and requirements so we can discuss house or villa construction." },
+  { q: "Can I discuss interiors as a separate service?", a: "Yes. We can discuss room layouts, materials and finishes for your home." },
+  { q: "What should I prepare for a joint venture discussion?", a: "Bring your land location, site dimensions and available property documents." },
+  { q: "What is the villa construction cost per sq ft in Chennai?", a: "The estimate depends on your plot, floor area, design and finishes. Share your budget and requirements for a scope-based quote." },
+];

@@ -1,0 +1,12 @@
+# Preserve the canonical domain, including direct folder uploads to Netlify.
+http://www.spproperties.co.in/* https://spproperties.co.in/:splat 301!
+https://www.spproperties.co.in/* https://spproperties.co.in/:splat 301!
+
+# Serve each exported page on direct visits and refreshes.
+/about /about.html 200
+/projects /projects.html 200
+/projects/* /projects/:splat.html 200
+/services /services.html 200
+/testimonials /testimonials.html 200
+/contact /contact.html 200
+/ambattur /ambattur.html 200

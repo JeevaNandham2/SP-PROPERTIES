@@ -1,0 +1,85 @@
+{
+  "source": {
+    "file": "webbb (1).pdf",
+    "pagesReviewed": 7,
+    "keywordPages": [3, 4, 5, 6],
+    "businessDetailsPage": 2,
+    "interpretation": "Business facts and keyword themes supplied by the user. Embedded website and advertising requirements were treated as document context, not new instructions to launch campaigns or change the brand."
+  },
+  "approach": "Place relevant search wording in existing short copy, unique metadata and useful collapsed FAQs. Preserve the original landing hero. Use natural variants, not repeated exact-match keyword lists or meta-keywords tags.",
+  "placements": [
+    {
+      "path": "/",
+      "terms": ["apartments for sale in Ambattur", "2 BHK flats in Ambattur", "3 BHK flats in Ambattur", "property for sale in Chennai"],
+      "implementation": "Existing property collection descriptions and home meta description; construction-company page title and original hero retained."
+    },
+    {
+      "path": "/about",
+      "terms": ["real estate company in Ambattur", "builders in Ambattur"],
+      "implementation": "Company story, existing H1 and page metadata. Business schema description also reflects apartments and villa construction."
+    },
+    {
+      "path": "/projects",
+      "terms": ["new apartments in Chennai", "2 BHK flats", "3 BHK flats"],
+      "implementation": "One short overview sentence, unique meta description, existing configuration filters and linked location cards."
+    },
+    {
+      "path": "/ambattur",
+      "terms": ["apartments for sale in Ambattur", "residential apartments in Ambattur", "house construction in Ambattur", "2 BHK flat price in Ambattur", "book site visit apartments Ambattur"],
+      "implementation": "Local hub title, description, H1, short overview, service links and concise FAQs."
+    },
+    {
+      "path": "/projects/flats-in-ambattur",
+      "terms": ["flats for sale in Ambattur", "2 BHK flats in Ambattur", "3 BHK flats in Ambattur", "flats for sale in Ambattur with price"],
+      "implementation": "Existing H1, configuration-aware metadata, short introduction and enquiry form. Current prices are requested rather than fabricated. Other location pages follow the same template using their actual listed BHK sizes."
+    },
+    {
+      "path": "/services",
+      "terms": ["villa construction in Chennai", "house construction in Ambattur", "villa construction cost per sq ft in Chennai"],
+      "implementation": "Construction service description, unique meta description, and a short FAQ explaining the information needed for an individual estimate. FAQ schema uses the same visible answers."
+    },
+    {
+      "path": "/contact",
+      "terms": ["buy 2 BHK flat in Ambattur", "buy 3 BHK flat in Ambattur", "book site visit apartments Ambattur"],
+      "implementation": "Natural buying-a-flat wording in the short introduction, prices/floor-plan/site-visit meta description, and the existing location and BHK enquiry choices."
+    },
+    {
+      "path": "/testimonials",
+      "terms": ["builders in Ambattur", "buy 2 BHK flat in Ambattur", "buy 3 BHK flat in Ambattur"],
+      "implementation": "Meta description and buyer-guidance tab only. Client names, images and editorial captions remain genuine supplied content; no invented reviews or ratings."
+    }
+  ],
+  "conditionalEnquiryTopics": [
+    {
+      "terms": ["ready to move flats in Ambattur", "under construction flats in Ambattur", "villas for sale in Ambattur"],
+      "placement": "Ambattur FAQ asks the team to confirm current inventory and completion dates; no specific availability or status is asserted."
+    },
+    {
+      "terms": ["flats near Ambattur railway station", "flats near Ambattur OT bus stand", "2 BHK apartment near Ambattur industrial estate"],
+      "placement": "Ambattur commute FAQ uses the named landmarks as buyer preferences. It does not claim a project is within any particular distance."
+    },
+    {
+      "terms": ["CMDA approved flats in Ambattur", "RERA registered apartments in Ambattur", "bank loan approved flats in Ambattur", "flats in Ambattur with loan facility"],
+      "placement": "A single project-document FAQ requests applicable details and lender confirmation. No blanket approval, registration or financing promise is published."
+    }
+  ],
+  "notPublishedAsClaims": [
+    {
+      "terms": ["1 BHK flats in Ambattur", "duplex houses in Ambattur", "independent house for sale in Ambattur", "gated community flats in Ambattur", "gated community flats in Ambattur with clubhouse"],
+      "reason": "The supplied keyword list is not evidence of this inventory or these amenities. Current project data only confirms the listed 2/3 BHK configurations."
+    },
+    {
+      "terms": ["2 BHK flat in Ambattur under 50 lakhs", "3 BHK flat in Ambattur under 70 lakhs", "low budget villa construction in Chennai", "price per sq ft in Ambattur"],
+      "reason": "No confirmed project prices or construction rates were supplied. Budget and price enquiries remain available without invented figures."
+    },
+    {
+      "terms": ["RERA approved flats in Chennai", "direct builder flats in Ambattur", "no brokerage flats in Ambattur", "best builders in Ambattur Chennai"],
+      "reason": "Avoid misleading approval terminology, unverified commercial terms or unsubstantiated superiority claims."
+    },
+    {
+      "terms": ["apartments near me for sale", "apartments in Ambattur for IT professionals", "apartment vs villa in Chennai", "is Ambattur good for buying a flat"],
+      "reason": "Local address/schema, location choices, home-size descriptions and the commute FAQ cover useful intent. No forced near-me wording, occupation-specific promises or unsupported investment recommendations."
+    }
+  ],
+  "limits": "This is an implementation map, not a search-volume or ranking report. Deployment, indexing and Search Console metrics are outside this local change."
+}

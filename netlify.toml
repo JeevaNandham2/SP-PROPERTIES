@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Keep the extensionless URLs already used by the site and its sitemap.
+[build.processing.html]
+  pretty_urls = false

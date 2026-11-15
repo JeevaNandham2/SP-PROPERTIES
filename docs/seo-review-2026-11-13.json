@@ -1,0 +1,162 @@
+{
+  "reviewedAt": "2026-11-13",
+  "scope": {
+    "implementedPage": "/about",
+    "localUrl": "http://localhost:3000/about",
+    "publicUrlAttempted": "https://sp.properties/about",
+    "sharedCodeReviewed": [
+      "content/site.ts",
+      "lib/seo.ts",
+      "app/layout.tsx",
+      "app/robots.ts",
+      "app/sitemap.ts",
+      "next.config.mjs"
+    ],
+    "limitations": [
+      "The configured public domain did not resolve, so a public HTML/head audit could not be completed.",
+      "No Google Search Console or verified Google Business Profile access was supplied.",
+      "Search volume, keyword difficulty, current Google organic/Maps positions and Core Web Vitals were not measured. Search result ordering is not a ranking report."
+    ]
+  },
+  "searchResearch": {
+    "location": "Chennai, Tamil Nadu, India",
+    "queries": [
+      "builders in Ambattur Chennai flat developers",
+      "\"SP Properties\" \"Ambattur\""
+    ],
+    "observations": [
+      "The sampled results include local directories, neighbourhood project pages and a construction company page.",
+      "A matching Instagram account appeared in branded search. Search snippets show phone numbers different from the configured website number; account ownership and current primary number need owner confirmation before updating external profiles.",
+      "The inspected builder page uses location-specific construction and contracting descriptions. SP Properties copy was written independently from its existing business/service data."
+    ]
+  },
+  "keywordPlan": [
+    {
+      "phrase": "builders in Ambattur",
+      "target": "/about",
+      "implementation": "Title, company introduction and relevant Ambattur office information."
+    },
+    {
+      "phrase": "construction company in Ambattur",
+      "target": "/about",
+      "implementation": "Natural company description with local address; a suggested search intent, not measured search volume."
+    },
+    {
+      "phrase": "flat developers in Chennai",
+      "target": "/services#flat-developers",
+      "implementation": "Professional service summary and descriptive internal link from About."
+    },
+    {
+      "phrase": "building contractor in Chennai",
+      "target": "/services#building-contractor",
+      "implementation": "Construction scope in About summary and service link."
+    },
+    {
+      "phrase": "interior services in Chennai",
+      "target": "/services#interior-services",
+      "implementation": "Interior service heading, description and service link."
+    },
+    {
+      "phrase": "joint venture development in Chennai",
+      "target": "/services#joint-venture",
+      "implementation": "Landowner partnership description and service link."
+    }
+  ],
+  "findings": [
+    {
+      "priority": "P0",
+      "status": "Awaiting permanent domain",
+      "affected": [
+        "All canonical URLs",
+        "/robots.txt",
+        "/sitemap.xml",
+        "Business structured data",
+        "www redirect in next.config.mjs"
+      ],
+      "evidence": "Firecrawl returned SCRAPE_DNS_RESOLUTION_ERROR for https://sp.properties/about. Windows Resolve-DnsName sp.properties -Type A independently returned DNS_ERROR_RCODE_NAME_ERROR. content/site.ts defaults to https://sp.properties.",
+      "impact": "The configured canonical destination is unavailable in these checks. Search discovery cannot be validated until a working permanent website address is known.",
+      "nextAction": "Confirm the owned permanent domain, configure NEXT_PUBLIC_SITE_URL and the matching www redirect, connect DNS/hosting, and deploy.",
+      "verify": "Verify public HTTPS 200 responses, rendered canonical/robots/sitemap URLs, then use Google Search Console URL Inspection. Do not replace canonicals with a temporary devtunnel."
+    },
+    {
+      "priority": "P1",
+      "status": "Implemented locally",
+      "affected": [
+        "/about"
+      ],
+      "evidence": "Professional company page replaces house-type cards and concept images. One H1, local company copy, four linked services, full office contact details, page metadata and AboutPage JSON-LD are present.",
+      "impact": "Provides clear business and location context to people and search engines.",
+      "verify": "Lint, TypeScript, production build and browser checks passed. AboutPage references the shared business entity; service anchors and internal destinations work."
+    },
+    {
+      "priority": "P1",
+      "status": "Fixed locally",
+      "affected": [
+        "Shared business structured data"
+      ],
+      "evidence": "Exact coordinates were explicitly marked unconfirmed in content/site.ts but were being emitted in businessSchema().",
+      "action": "Stopped publishing unconfirmed coordinates. Existing visible address and phone remain unchanged.",
+      "verify": "Browser JSON-LD inspection confirms no geo field and confirms the phone matches visible office details."
+    },
+    {
+      "priority": "P1",
+      "status": "Owner verification required",
+      "affected": [
+        "Google Business Profile",
+        "External business listings"
+      ],
+      "nextAction": "Confirm the Business Profile Maps link and ownership. Verify real primary category, company name, address, phone and opening hours against current business details; add genuine office/project photos and respond to genuine reviews.",
+      "verify": "Check the public profile and all owned contact profiles for consistent current details. Do not invent reviews, credentials, opening hours or coordinates."
+    },
+    {
+      "priority": "P2",
+      "status": "After permanent deployment",
+      "affected": [
+        "Google Search Console"
+      ],
+      "nextAction": "Verify domain ownership, submit the sitemap, inspect /about and relevant service/location pages, and track actual impressions, clicks and local query performance.",
+      "verify": "Use actual Search Console reports; no top-three ranking or timeline is guaranteed."
+    }
+  ],
+  "validation": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": "passed, 26 generated pages",
+    "browserWidths": [
+      320,
+      390,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "checks": [
+      "No house gallery or house configuration cards in About",
+      "No horizontal overflow",
+      "Mobile body text uses full navy at 16px",
+      "Scroll reveals and reduced-motion support work",
+      "All About internal links return HTTP 200",
+      "Four service links scroll to their intended sections",
+      "Metadata and entity-linked JSON-LD are present",
+      "No browser runtime errors"
+    ],
+    "deployment": "Local source and dev preview updated. No production deployment claimed."
+  },
+  "sources": [
+    {
+      "title": "Google SEO Starter Guide",
+      "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+      "use": "Natural relevant content, descriptive titles, useful internal links, no ranking guarantee, meta keywords not used by Google."
+    },
+    {
+      "title": "Google local ranking guidance",
+      "url": "https://support.google.com/business/answer/7091?hl=en",
+      "use": "Google Maps/local ranking depends on relevance, distance and prominence; accurate verified profile information, genuine reviews and photos."
+    },
+    {
+      "title": "Local builder comparison page",
+      "url": "https://impacthomes.co.in/builders-in-ambattur/",
+      "use": "Observed service wording in one competing page; not a verified ranking position or endorsement."
+    }
+  ]
+}

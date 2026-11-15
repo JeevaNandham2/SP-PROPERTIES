@@ -1,0 +1,14 @@
+{
+  "method": "Built-in image_gen tool",
+  "usage": "Illustrative single-storey home concepts for the About page; not actual project photography.",
+  "assets": [
+    {
+      "path": "public/images/about/2-bhk-home.png",
+      "prompt": "Use case: photorealistic-natural. Asset: website architectural concept image, landscape 3:2, high resolution. Create a beautiful, believable compact SINGLE-STOREY 2-bedroom family house in a quiet Chennai neighbourhood, India. One ground floor only, flat terrace roof, modest footprint, cream plaster walls, restrained navy blue window frames, simple timber front door, small shaded entrance verandah, two front windows, neat little planted front garden, low boundary wall and short pedestrian path. Show the COMPLETE house from roofline to ground, gently elevated eye-level three-quarter architectural photograph, natural proportions and real material texture. Warm morning daylight, soft ivory sky, a few tropical plants. Tasteful attainable home rather than a mansion. Entire building comfortably in frame with breathing room. No extra floors, no tall buildings, no apartment block, no pool, no cars, no people, no text or labels, no logos, no watermarks."
+    },
+    {
+      "path": "public/images/about/3-bhk-home.png",
+      "prompt": "Use case: photorealistic-natural. Asset: website architectural concept image, landscape 3:2, high resolution. Create a tasteful modest SINGLE-STOREY 3-bedroom family home in a quiet Chennai neighbourhood, India. One ground floor only. Slightly wider L-shaped footprint with a small courtyard and covered front verandah, contemporary flat terrace roof, ivory plaster walls, restrained navy blue window frames, timber front door, soft stone details and simple tropical planting within a modest front garden. Show COMPLETE house from roofline to ground, gently elevated eye-level three-quarter architectural photograph, crisp real textures and realistic domestic scale. Warm morning daylight, soft ivory sky. This is a welcoming small family residence, not a luxury mansion. Entire building comfortably in frame with breathing room. No extra floors, no tall buildings, no apartment block, no pool, no cars, no people, no text or labels, no logos, no watermarks."
+    }
+  ]
+}

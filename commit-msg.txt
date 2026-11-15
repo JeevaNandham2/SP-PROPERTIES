@@ -1,0 +1,4 @@
+SP Properties website: Next.js 15 site ready for Netlify
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01T7QzC7AEbARmdtEg8uaRDv

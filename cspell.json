@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "language": "en,en-GB",
+  "words": [
+    "Ambattur",
+    "Annanagar",
+    "Annanur",
+    "Ayyapakkam",
+    "BHK",
+    "Bodoni",
+    "Chennai",
+    "CMDA",
+    "DTCP",
+    "Jost",
+    "Kallikuppam",
+    "Kolathur",
+    "Korattur",
+    "Kovur",
+    "Koyambedu",
+    "Maduravoil",
+    "Maduravoyal",
+    "Nagar",
+    "Perambur",
+    "RERA",
+    "Thirumullaivoyal",
+    "WhatsApp"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".next/**",
+    ".next-dev/**",
+    "tmp/**",
+    "test-results/**",
+    "playwright-report/**",
+    ".playwright-mcp/**",
+    "package-lock.json",
+    "*.tsbuildinfo"
+  ]
+}

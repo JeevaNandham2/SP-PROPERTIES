@@ -1,0 +1,317 @@
+{
+  "checkedOn": "2026-11-14",
+  "status": "Implemented and checked in the local project",
+  "scope": {
+    "publicPages": 18,
+    "templates": [
+      "Home",
+      "About",
+      "Projects",
+      "Services",
+      "Testimonials",
+      "Contact",
+      "Ambattur hub",
+      "11 project location pages"
+    ],
+    "method": "Local source review, production-rendered HTML and browser checks; current Google guidance and a Chennai construction search were consulted."
+  },
+  "keywordPlan": [
+    {
+      "path": "/",
+      "primary": "construction company in Chennai",
+      "supporting": ["residential construction", "2 & 3 BHK homes"],
+      "placement": "Page title, meta description and existing visible introduction heading; original hero preserved."
+    },
+    {
+      "path": "/about",
+      "primary": "builders in Ambattur",
+      "supporting": ["SP Properties", "Chennai property development"],
+      "placement": "Unique title, description, H1 and company profile."
+    },
+    {
+      "path": "/projects",
+      "primary": "flats in Chennai",
+      "supporting": ["2 BHK flats", "3 BHK flats", "Chennai neighbourhoods"],
+      "placement": "Title, description, H1, BHK filters and linked location cards."
+    },
+    {
+      "path": "/services",
+      "primary": "building contractors in Chennai",
+      "supporting": [
+        "house construction in Chennai",
+        "interior services",
+        "joint ventures in Chennai",
+        "flat development"
+      ],
+      "placement": "Title, description, H1 and concise relevant service descriptions."
+    },
+    {
+      "path": "/testimonials",
+      "primary": "SP Properties testimonials",
+      "supporting": ["client stories", "Chennai families"],
+      "placement": "Title, description and visible introductory copy. No invented quotes, reviews or ratings."
+    },
+    {
+      "path": "/contact",
+      "primary": "real estate office in Ambattur",
+      "supporting": ["SP Properties contact", "Kallikuppam"],
+      "placement": "Unique contact title and description, Ambattur office heading and address, construction-service internal link and ContactPage schema."
+    },
+    {
+      "path": "/ambattur",
+      "primary": "homes and construction in Ambattur",
+      "supporting": [
+        "2 & 3 BHK homes in Ambattur",
+        "house construction",
+        "local office"
+      ],
+      "placement": "Local hub title, H1, short overview, FAQ and links to property and service pages."
+    },
+    {
+      "path": "/projects/[location]",
+      "primary": "[listed BHK sizes] flats in [location]",
+      "supporting": ["flats for sale in [location]", "Chennai homes"],
+      "placement": "Distinct title, description, H1, concise configuration table and related location links. Configuration claims come from content/projects.ts."
+    }
+  ],
+  "implementedFindings": [
+    {
+      "priority": "P1",
+      "affected": [
+        "/about",
+        "/services",
+        "/testimonials",
+        "/ambattur",
+        "/contact",
+        "/projects",
+        "/projects/[location]"
+      ],
+      "finding": "Repeated paragraphs, captions and headings made mobile pages lengthy. The Ambattur page included an unfinished neighbourhood placeholder and unverified proximity/budget claims.",
+      "fix": "Replaced paragraphs with brief useful copy, removed the unfinished claims, condensed tables/cards, collapsed FAQs by default, tightened spacing and made the mobile footer more compact.",
+      "verification": "Production copy comparison plus responsive browser review."
+    },
+    {
+      "priority": "P1",
+      "affected": ["All 18 public pages"],
+      "finding": "Project overview and local pages overlapped in their SEO focus; testimonial metadata was managed separately.",
+      "fix": "Centralized distinct page intent in content/seo.ts. Applied accurate location-specific BHK titles and descriptions, with relevant visible headings and concise copy.",
+      "verification": "Every public page has one H1, one unique title and description, and one correct canonical; no noindex directive."
+    },
+    {
+      "priority": "P1",
+      "affected": ["All 11 project location pages"],
+      "finding": "Residence markup described a specific property even though these are neighbourhood enquiry pages with illustrative imagery.",
+      "fix": "Changed the template to WebPage markup about the named Place. No invented prices, inventory, approval status or review ratings.",
+      "verification": "JSON-LD is parsed on all routes and checked for the appropriate page type; no Residence or Review markup."
+    },
+    {
+      "priority": "P2",
+      "affected": [
+        "Shared SEO helpers",
+        "/projects",
+        "/services",
+        "/testimonials",
+        "/contact"
+      ],
+      "finding": "Page metadata lacked explicitly configured social images; some custom page templates lacked breadcrumb/page structured data.",
+      "fix": "Added a branded 1200x630 social preview, complete Open Graph/Twitter data, linked WebSite/WebPage entities and missing breadcrumbs. ContactPage and projects CollectionPage reflect their actual purpose.",
+      "verification": "Browser metadata assertions, schema parsing, HTTP image checks and visual review."
+    },
+    {
+      "priority": "P2",
+      "affected": ["Shared SEO helpers", "/sitemap.xml", "/robots.txt"],
+      "finding": "Meta keywords were emitted even though Google does not use them; sitemap lastModified was reset to the current build date.",
+      "fix": "Removed the unused meta-keywords output and omitted lastModified until genuine per-page dates are tracked. Retained all 18 public canonical URLs and the robots sitemap reference. Normalized the configured origin to avoid duplicate slashes.",
+      "verification": "Browser/API tests check the sitemap, canonical URLs, robots reference and absence of meta keywords."
+    },
+    {
+      "priority": "P2",
+      "affected": [
+        "/ambattur",
+        "/projects/[location]",
+        "/contact",
+        "Shared footer"
+      ],
+      "finding": "Long duplicate copy and ambiguous phone labels made navigation less direct.",
+      "fix": "Added relevant service/project links to the Ambattur hub, all-location links from detail pages, clear call/WhatsApp choices and a smaller footer that retains navigation and contact details.",
+      "verification": "All discovered internal page and fragment links resolve to existing pages and anchors. Forms, menus, carousel and chat regression checks pass."
+    }
+  ],
+  "copyComparison": {
+    "method": "Words in the server-rendered main element, excluding scripts, styles, header and footer. The projects overview count covers its initial streamed shell, not the deferred carousel. This is a copy comparison, not an SEO score or ranking signal.",
+    "pages": {
+      "/about": {
+        "before": 491,
+        "after": 234,
+        "reductionPercent": 52
+      },
+      "/ambattur": {
+        "before": 498,
+        "after": 243,
+        "reductionPercent": 51
+      },
+      "/contact": {
+        "before": 113,
+        "after": 210,
+        "reductionPercent": -86,
+        "note": "Updated after the requested full contact-page redesign. Count includes form labels, all location options and the four enquiry topics; visible paragraphs remain short."
+      },
+      "/": {
+        "before": 299,
+        "after": 299,
+        "reductionPercent": 0
+      },
+      "/projects": {
+        "before": 93,
+        "after": 60,
+        "reductionPercent": 35
+      },
+      "/services": {
+        "before": 695,
+        "after": 319,
+        "reductionPercent": 54
+      },
+      "/testimonials": {
+        "before": 304,
+        "after": 297,
+        "reductionPercent": 2,
+        "note": "Updated after the user requested a richer testimonials design and content addressing client needs. Includes the initially selected home-priority panel; other panels are interactive."
+      },
+      "/projects/flats-in-ambattur": {
+        "before": 220,
+        "after": 173,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-anna-nagar": {
+        "before": 218,
+        "after": 172,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-annanur": {
+        "before": 221,
+        "after": 174,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-ayyapakkam": {
+        "before": 217,
+        "after": 173,
+        "reductionPercent": 20
+      },
+      "/projects/flats-in-kolathur": {
+        "before": 217,
+        "after": 170,
+        "reductionPercent": 22
+      },
+      "/projects/flats-in-korattur": {
+        "before": 217,
+        "after": 173,
+        "reductionPercent": 20
+      },
+      "/projects/flats-in-kovur": {
+        "before": 211,
+        "after": 167,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-koyambedu": {
+        "before": 210,
+        "after": 166,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-maduravoyal": {
+        "before": 210,
+        "after": 166,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-perambur": {
+        "before": 213,
+        "after": 169,
+        "reductionPercent": 21
+      },
+      "/projects/flats-in-thirumullaivoyal": {
+        "before": 221,
+        "after": 174,
+        "reductionPercent": 21
+      }
+    }
+  },
+  "validation": {
+    "productionBuild": "Passed",
+    "publicRoutes": 18,
+    "metadataAndLinks": "Passed across every public page",
+    "initialBrowserSuite": "26 checks passed",
+    "finalResponsiveWidths": [320, 390, 1440],
+    "finalResponsiveChecks": "Passed: 4 final SEO/browser checks, including all 18 pages and 320px, 390px and 1440px layouts",
+    "deployment": "Local changes only; not published by this task.",
+    "visualReview": "Reviewed the shorter About, Services, Contact and location layouts and the branded social preview; corrected footer density and social-logo contrast."
+  },
+  "research": {
+    "queries": [
+      "construction company Chennai Ambattur house construction 2 BHK 3 BHK flats",
+      "residential building contractors construction company Chennai Ambattur"
+    ],
+    "location": "Chennai, Tamil Nadu, India",
+    "purpose": "Confirm local search wording and intent. Search order was not treated as a ranking measurement.",
+    "sources": [
+      {
+        "title": "Google Search Central SEO Starter Guide",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+        "usedFor": "Useful concise content, natural search terms, unique titles/descriptions, descriptive images and links; meta keywords are unused by Google."
+      },
+      {
+        "title": "HireAndBuild official service page",
+        "url": "https://hireandbuild.com/",
+        "usedFor": "Observed Chennai residential construction and house-construction terminology only. No competitor prices, warranties or claims were copied."
+      }
+    ]
+  },
+  "verificationLimits": [
+    "Production deployment, Google indexing and Search Console reports were not accessed.",
+    "No keyword search-volume, traffic, ranking, backlink or Core Web Vitals measurements are claimed.",
+    "The canonical origin follows NEXT_PUBLIC_SITE_URL, defaulting to https://spproperties.co.in. Confirm the permanent domain before deployment.",
+    "Project-specific prices, floor plans, completion dates, distances and approvals still require business confirmation; none were invented."
+  ],
+  "afterDeployment": [
+    "Verify the permanent domain in Google Search Console and submit /sitemap.xml.",
+    "Inspect representative URLs after deployment, then use actual impressions and clicks to refine page targeting."
+  ],
+  "subsequentUpdates": [
+    {
+      "date": "2026-11-14",
+      "path": "/testimonials",
+      "change": "Redesigned with a featured family photograph, four editorial story cards, a full-screen photo viewer and interactive guidance on family space, location and project details. Real client photos and existing names are retained; captions are brand editorial text, not attributed client quotations.",
+      "seo": "Existing title, description, canonical, page schema and breadcrumbs retained. All five client fragment links still resolve. No fabricated review or rating markup.",
+      "validation": "Production build and all 7 targeted SEO/browser checks passed. Reviewed mobile, tablet and desktop layouts at 320px, 390px, 768px and 1440px, photo viewer navigation and focus restoration, priority selection, personalised WhatsApp links and image loading."
+    },
+    {
+      "date": "2026-11-14",
+      "path": "/contact and all public pages",
+      "change": "Redesigned contact page with direct call, WhatsApp and email options, a service-specific enquiry form, verified Ambattur office details and directions. Added shared smooth wheel scrolling and one-time entrance animations across page templates.",
+      "accessibility": "Native touch scrolling retained. Smooth scrolling disabled with reduced motion, including live preference changes. Menu, chat and photo viewer locks pause scrolling. Content stays visible without JavaScript and on keyboard focus.",
+      "seo": "Contact metadata, canonical and ContactPage schema retained; breadcrumb schema restored with new layout. Existing titles, internal links and public routes verified.",
+      "reference": "https://github.com/darkroomengineering/lenis",
+      "validation": "Production build, 23 logic tests and all 38 browser checks passed. Responsive contact layouts reviewed at 320px, 390px, 768px and 1440px. WhatsApp handoff tested without sending messages. A focused scroll-reveal check also confirmed each observed section reaches full opacity."
+    },
+    {
+      "date": "2026-11-14",
+      "path": "All public pages; Ambattur search intent",
+      "change": "Applied relevant keyword themes from webbb (1).pdf to existing short copy, unique meta descriptions, property cards and visible collapsed FAQs. Preserved the original landing hero and existing branding.",
+      "keywordMap": "docs/pdf-keyword-plan-2026-11-14.json",
+      "motion": "Shared capability policy selects native scrolling and shorter opacity reveals on touch, data-saving and limited-hardware devices. The location deck and interiors use compact direct controls in lighter mode. Desktop easing runs only while moving. Reveal registration scans only new subtrees; pinned scenes ignore offscreen scroll work. Map and carousel activity stops in hidden tabs; lighter carousels rest between native slides.",
+      "validation": {
+        "productionBuild": "Passed, including lint and TypeScript checks",
+        "unitTests": "26 passed",
+        "browserChecks": "12 focused adaptive-motion, contact/navigation and PDF-keyword checks passed. Other regression coverage passed in the preceding full-suite run.",
+        "deviceSimulation": "390 x 844 touch viewport, 2 CPU cores and 2 GB memory hints, with 6x CPU slowdown across eight page templates. All 11 locations and interior choices remained reachable.",
+        "responsiveChecks": "320, 390, 768 and 1440 px contact layouts; narrow secondary layouts and all 18 page metadata/link checks also passed.",
+        "idleCheck": "Desktop contact page schedules fewer than three animation callbacks over a 650 ms idle observation, both before and after wheel input.",
+        "visualReview": "Reviewed the compact touch location deck and interior controls; no horizontal page overflow.",
+        "limits": "Browser emulation, not a physical-device benchmark or production Core Web Vitals measurement. No ranking gains claimed."
+      },
+      "references": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+        "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory",
+        "https://github.com/darkroomengineering/lenis"
+      ]
+    }
+  ]
+}
