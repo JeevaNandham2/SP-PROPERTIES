@@ -16,3 +16,10 @@ dist/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+content/projects.data.json
+public/content-version.json
+public/images/managed/
+public/admin/
+sp-properties-deployment-*/
+sp-properties-deployment-*.zip
+releases/

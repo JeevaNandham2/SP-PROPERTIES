@@ -12,5 +12,9 @@ export const enquirySchema = z.object({
   consent: z.literal(true, { error: "Please tick the box so we can contact you." }),
 });
 
+export const projectEnquirySchema = enquirySchema.extend({
+  bhk: z.string().refine((value) => value === "2 BHK" || value === "3 BHK", "Please choose 2 BHK or 3 BHK."),
+});
+
 export type EnquiryInput = z.input<typeof enquirySchema>;
 export type EnquiryOutput = z.output<typeof enquirySchema>;

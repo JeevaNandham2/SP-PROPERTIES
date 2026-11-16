@@ -9,7 +9,7 @@ export function HomeHero() {
       <div className="hero-background">
         <Image
           src="/images/hero-panorama.webp"
-          alt="Architectural concept of a complete contemporary residence with landscaped frontage"
+          alt="Architectural concept of a contemporary residence with landscaped frontage, presented by SP Properties, Ambattur"
           fill
           priority
           quality={90}
@@ -20,11 +20,11 @@ export function HomeHero() {
       <div className="hero-overlay" aria-hidden="true" />
       <Container className="hero-content">
         <div className="hero-copy">
-          <Eyebrow>SP Properties · Chennai</Eyebrow>
-          <h1 id="home-hero-title" className="hero-headline font-display">A place to live.<br /><em>A space to belong.</em></h1>
-          <p className="hero-description">2 & 3 BHK homes in Ambattur and across Chennai.</p>
+          <Eyebrow>SP Properties · Ambattur</Eyebrow>
+          <h1 id="home-hero-title" className="hero-headline font-display">Flats in Ambattur.<br /><em>A space to belong.</em></h1>
+          <p className="hero-description">Explore 2 & 3 BHK flats with our local Ambattur team.</p>
           <div className="hero-buttons">
-            <ButtonLink href="/projects" variant="gold">Find your home <ArrowUpRight size={17} aria-hidden /></ButtonLink>
+            <ButtonLink href="/projects" variant="gold">Find your flat <ArrowUpRight size={17} aria-hidden /></ButtonLink>
             <ButtonLink href="/contact" variant="outline">Book a site visit</ButtonLink>
           </div>
         </div>

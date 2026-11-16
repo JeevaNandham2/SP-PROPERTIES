@@ -26,15 +26,15 @@ export default function ContactPage() {
           <div className="contact-introduction">
             <div className="contact-hero-copy" data-reveal>
               <p className="contact-eyebrow">Contact SP Properties</p>
-              <h1 id="contact-heading">Let&apos;s talk<br /><em>about your plans.</em></h1>
-              <p>Buying a home in Ambattur or building in Chennai? Talk to us about prices, floor plans, interiors or a site visit.</p>
-              <div className="contact-hero-actions"><a href="#enquiry" className="contact-primary-link">Start a conversation <ArrowDown size={17} aria-hidden="true" /></a><span className="contact-location"><MapPin size={15} aria-hidden="true" /> Ambattur, Chennai</span></div>
+              <h1 id="contact-heading">Your plans.<br /><em>Our Ambattur team.</em></h1>
+              <p>Buying a flat or planning construction in Ambattur? Talk to us about prices, floor plans, interiors or a site visit.</p>
+              <div className="contact-hero-actions"><a href="#enquiry" className="contact-primary-link">Start a conversation <ArrowDown size={17} aria-hidden="true" /></a><span className="contact-location"><MapPin size={15} aria-hidden="true" /> Ambattur</span></div>
             </div>
             <aside className="contact-connect" data-reveal="right" aria-labelledby="connect-heading">
               <div className="contact-connect-top"><div><p className="contact-eyebrow">Speak with us</p><h2 id="connect-heading">A direct connection.</h2></div><span className="contact-logo-tile" aria-hidden="true"><span className="contact-brand-mark" /></span></div>
               <div className="contact-channels">
                 <a href={site.phoneHref} className="contact-channel"><span className="contact-channel-icon"><Phone size={20} strokeWidth={1.5} aria-hidden="true" /></span><span><small>Give us a call</small><strong>{site.phoneDisplay}</strong></span><ArrowUpRight size={17} aria-hidden="true" /></a>
-                <a href={waLink("Hi SP Properties, I would like to discuss a home or construction project in Chennai.")} target="_blank" rel="noopener noreferrer" className="contact-channel contact-channel-whatsapp"><span className="contact-channel-icon"><MessageCircle size={20} strokeWidth={1.5} aria-hidden="true" /></span><span><small>Message our team</small><strong>Chat on WhatsApp</strong></span><ArrowUpRight size={17} aria-hidden="true" /></a>
+                <a href={waLink("Hi SP Properties, I would like to discuss a flat or construction project with your Ambattur team.")} target="_blank" rel="noopener noreferrer" className="contact-channel contact-channel-whatsapp"><span className="contact-channel-icon"><MessageCircle size={20} strokeWidth={1.5} aria-hidden="true" /></span><span><small>Message our team</small><strong>Chat on WhatsApp</strong></span><ArrowUpRight size={17} aria-hidden="true" /></a>
                 <a href={`mailto:${site.email}`} className="contact-channel contact-channel-email"><span className="contact-channel-icon"><Mail size={20} strokeWidth={1.5} aria-hidden="true" /></span><span><small>Send us an email</small><strong>{site.email}</strong></span><ArrowUpRight size={17} aria-hidden="true" /></a>
               </div>
             </aside>
@@ -53,7 +53,7 @@ export default function ContactPage() {
               <section className="contact-office" id="office" data-reveal="left" aria-labelledby="office-heading">
                 <div className="contact-office-top"><p className="contact-eyebrow">Visit our office</p><span className="contact-office-pin" aria-hidden="true"><MapPin size={23} strokeWidth={1.4} /></span></div>
                 <h2 id="office-heading">Local roots.<br /><em>Personal guidance.</em></h2>
-                <div className="contact-office-address"><h3>SP Properties · Ambattur</h3><address>{site.address.line1}<br />{site.address.line2}<br />{site.address.locality}, {site.address.city} &ndash; {site.address.postalCode}</address></div>
+                <div className="contact-office-address"><h3>SP Properties · Ambattur</h3><address>{site.address.line1}<br />{site.address.line2}<br />{site.address.locality}, {site.address.region} &ndash; {site.address.postalCode}</address></div>
                 <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="contact-directions"><Navigation size={17} aria-hidden="true" /><span>Get directions</span><ArrowUpRight size={17} aria-hidden="true" /></a>
                 <p className="contact-visit-note">Call ahead to arrange your visit.</p>
               </section>
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
       <div className="contact-explore-section">
         <Container>
-          <div className="contact-explore" data-reveal><p>Still finding <em>your direction?</em></p><div><Link href="/projects">Explore Chennai homes <ArrowUpRight size={16} aria-hidden="true" /></Link><Link href="/services">Our construction services <ArrowUpRight size={16} aria-hidden="true" /></Link></div></div>
+          <div className="contact-explore" data-reveal><p>Still finding <em>your direction?</em></p><div><Link href="/projects">Explore flats in Ambattur <ArrowUpRight size={16} aria-hidden="true" /></Link><Link href="/services">Our construction services <ArrowUpRight size={16} aria-hidden="true" /></Link></div></div>
         </Container>
       </div>
       <JsonLd data={webPageSchema({ ...pageSeo.contact, path: "/contact", type: "ContactPage" })} />

@@ -84,7 +84,7 @@ export function EarthGlobe({ locationsHref = "#project-locations" }: { locations
         if (disposed) return;
         if (visible && !document.hidden && time - lastTime > 65) {
           lastTime = time;
-          // A gentle tilt keeps India and the Chennai marker in view.
+          // A gentle tilt keeps India and the Ambattur marker in view.
           const center = (80.27 + (motion.matches ? 0 : Math.sin(time / 10000) * 5)) * Math.PI / 180;
           for (const point of surface) {
             const u = ((point.longitude + center) / (2 * Math.PI) + 0.5 + 1) % 1;
@@ -140,23 +140,23 @@ export function EarthGlobe({ locationsHref = "#project-locations" }: { locations
     <div ref={sceneRef} className={`earth-tour ${playing ? "is-playing" : ""}`} onMouseEnter={() => setInteracting(true)} onMouseLeave={() => setInteracting(false)} onFocusCapture={() => setInteracting(true)} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setInteracting(false); }}>
       <div className="earth-tour-stage">
         <div className="earth-tour-atmosphere" aria-hidden="true" />
-        <canvas ref={canvasRef} width={520} height={520} className="earth-tour-canvas" role="img" aria-label="Three-dimensional Earth centred on India, with an animated marker for the Chennai region" />
+        <canvas ref={canvasRef} width={520} height={520} className="earth-tour-canvas" role="img" aria-label="Three-dimensional Earth centred on India, with an animated marker for the Ambattur area" />
         <div className="earth-tour-clouds" aria-hidden="true" />
         <div className="earth-tour-card" key={project.slug}>
-          <span className="earth-tour-kicker"><MapPin size={13} /> CHENNAI COLLECTION</span>
+          <span className="earth-tour-kicker"><MapPin size={13} /> AMBATTUR & BEYOND</span>
           <h3>{project.location}</h3>
-          <p>{project.configurations.map((c) => `${c.bhk} BHK`).join(" & ")} homes ? Chennai</p>
+          <p>{project.configurations.map((c) => `${c.bhk} BHK`).join(" & ")} flats · SP Properties</p>
           <Link href={`/projects/${project.slug}`}>Explore this location <ArrowUpRight size={16} /></Link>
           <div className="earth-tour-progress" aria-hidden="true"><i /></div>
         </div>
-        <span className="earth-tour-region">INDIA <span>CHENNAI REGION</span></span>
+        <span className="earth-tour-region">INDIA <span>AMBATTUR AREA</span></span>
       </div>
       <div className="earth-tour-navigation">
         <div className="earth-tour-counter"><strong>{String(active + 1).padStart(2,"0")}</strong><span>/ {projects.length} LOCATIONS</span></div>
         <div className="earth-tour-controls"><button type="button" aria-label="Previous location" onClick={() => change(active - 1)}><ArrowLeft size={17} /></button><button type="button" aria-label={paused || reduced ? "Start automatic location tour" : "Pause automatic location tour"} aria-pressed={!paused && !reduced} onClick={() => { setPaused(!(paused || reduced)); setReduced(false); }}>{paused || reduced ? <Play size={16} /> : <Pause size={16} />}</button><button type="button" aria-label="Next location" onClick={() => change(active + 1)}><ArrowRight size={17} /></button></div>
       </div>
       <div className="earth-tour-dots" role="group" aria-label="Choose a neighbourhood">{projects.map((p,i) => <button key={p.slug} type="button" aria-label={`Show ${p.location}`} aria-pressed={active === i} onClick={() => change(i)}><span /></button>)}</div>
-      <p className="earth-tour-note">Chennai region highlighted. Neighbourhoods share the regional marker; exact addresses are available from our team.</p>
+      <p className="earth-tour-note">Ambattur area highlighted. Neighbourhoods share the regional marker; exact addresses are available from our team.</p>
       <a href={locationsHref} className="earth-tour-all">Explore all neighbourhoods <ArrowRight size={15} /></a>
     </div>
   );

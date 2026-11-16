@@ -17,7 +17,7 @@ for (const width of [390, 768, 1440]) {
     await options.getByRole("button", { name: "The right location" }).click();
     await expect(page.getByRole("heading", { name: "Closer to what matters." })).toBeVisible();
     await expect(page.getByRole("link", { name: "Find your neighbourhood" })).toHaveAttribute("href", "/projects#location-map");
-    await expect(page.getByRole("link", { name: "Discuss on WhatsApp" })).toHaveAttribute("href", /choosing%20a%20home%20location/);
+    await expect(page.getByRole("link", { name: "Discuss on WhatsApp" })).toHaveAttribute("href", /comparing%20Ambattur%20with%20other%20flat%20locations/);
     await options.getByRole("button", { name: "Clarity before I decide" }).click();
     await expect(page.getByRole("heading", { name: "Your questions, welcomed." })).toBeVisible();
     await expect(options.locator('[aria-pressed="true"]')).toHaveCount(1);

@@ -6,7 +6,7 @@ for (const width of [390, 768, 1440]) {
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto("/services");
-    await expect(page.locator("h1")).toContainText(/building contractors in Chennai/i);
+    await expect(page.locator("h1")).toContainText(/building contractors in Ambattur/i);
     await expect.poll(() => page.locator(".svc-hero-image").evaluate((el) => (el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
     await page.screenshot({ path: `test-results/services-${width}-hero.png` });
     await page.locator(".svc-navigation").getByRole("link", { name: /Interior planning/ }).click();

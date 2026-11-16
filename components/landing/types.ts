@@ -10,6 +10,7 @@ export interface Location {
   slug: string;
   name: string;
   image: string;
+  imageAlt?: string;
   configurations: Configuration[];
 }
 

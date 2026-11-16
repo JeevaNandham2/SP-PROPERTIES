@@ -12,7 +12,7 @@ import { enquirySchema } from "@/lib/validation";
 import "./chat.css";
 
 const KEY = "sp-chat-v2";
-const intentLabels: Record<string,string> = { homes: "Home enquiry", price: "Pricing", available: "Availability", visit: "Site visit", brochure: "Brochure and floor plans", construction: "House construction", interiors: "Interior services", jointventure: "Landowner joint venture" };
+const intentLabels: Record<string,string> = { flats: "Flat enquiry", price: "Pricing", available: "Availability", visit: "Site visit", brochure: "Brochure and floor plans", construction: "House construction", interiors: "Interior services", jointventure: "Landowner joint venture" };
 function handoff(context: ChatContext, question?: string) {
   return waLink(["Hello SP Properties, I would like assistance.", context.location ? `Location: ${context.location}` : "", context.bhk ? `Configuration: ${context.bhk} BHK` : "", context.intent ? `Interested in: ${intentLabels[context.intent]}` : "", question ? `Enquiry: ${question}` : ""].filter(Boolean).join("\n"));
 }
@@ -103,7 +103,7 @@ export function ChatWidget({ open, onClose }: { open: boolean; onClose: () => vo
   return (
     <section ref={dialogRef} role="dialog" aria-modal="true" aria-label={`Chat with ${site.name}`} className="sp-chat">
       <header className="sp-chat-header"><span className="sp-chat-brand" aria-hidden="true" /><div><p>{site.name}</p><span>Property &amp; construction assistant</span></div><button type="button" onClick={restart} aria-label="Restart chat"><RotateCcw size={16} /></button><button type="button" onClick={onClose} aria-label="Close chat"><X size={20} /></button></header>
-      <div className="sp-chat-service-note">Homes · Construction · Interiors · Joint ventures</div>
+      <div className="sp-chat-service-note">Flats · Construction · Interiors · Joint ventures</div>
       <div ref={logRef} role="log" aria-live="polite" aria-relevant="additions" className="sp-chat-log">
         {msgs.map((m) => {
           if ("kind" in m && m.kind === "lead") return <LeadForm key={m.id} topic={topic} />;

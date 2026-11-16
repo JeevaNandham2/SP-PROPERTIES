@@ -1,8 +1,8 @@
 export type Faq = { q: string; a: string };
 
 export const generalFaqs: Faq[] = [
-  { q: "What properties do you offer?", a: "We help buyers explore apartments and villas in Ambattur and across Chennai, with 2 and 3 BHK homes in 11 locations." },
-  { q: "Do you have 2 BHK or 3 BHK apartments?", a: "Yes, we have both 2 BHK and 3 BHK homes across our Chennai locations. Contact our team for current availability." },
+  { q: "What properties do you offer?", a: "We help buyers explore apartments and villas in Ambattur and nearby neighbourhoods, with 2 and 3 BHK flats in 11 locations." },
+  { q: "Do you have 2 BHK or 3 BHK apartments?", a: "Yes, we have both 2 BHK and 3 BHK flats in Ambattur and other locations. Contact our team for current availability." },
   { q: "Where are your projects located?", a: "Ambattur, Thirumullaivoyal, Annanur, Ayyapakkam, Perambur, Korattur, Kolathur, Anna Nagar, Maduravoyal, Koyambedu and Kovur." },
   { q: "Can I get a brochure or floor plan?", a: "Yes. Send the location name to our team on WhatsApp and we will share the brochure and floor plans." },
   { q: "Can I book a site visit?", a: "Yes. Share the location and your preferred day and time. Our team will confirm the appointment with you." },

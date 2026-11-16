@@ -3,10 +3,10 @@ export const site = {
   name: "SP Properties",
   tagline: "We Build, What You Love.",
   description:
-    "SP Properties is a real estate and construction company in Ambattur, Chennai, offering apartments, villa construction, interiors and joint ventures with 10 years of experience.",
+    "SP Properties is a real estate and construction company in Ambattur, offering flats, villa construction, interiors and joint ventures with 10 years of experience.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://spproperties.co.in").replace(/\/+$/, ""),
   experienceYears: 10,
-  market: "Chennai, Tamil Nadu",
+  market: "Ambattur, Tamil Nadu",
   focusArea: "Ambattur",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919500124126",
   phoneDisplay: "+91 95001 24126",
@@ -20,7 +20,7 @@ export const site = {
     region: "Tamil Nadu",
     postalCode: "600053",
     country: "IN",
-    full: "F2, 1st Floor, Balaji Nagar East, Plot No. 229, Devi Apartments, Kallikuppam, Ambattur, Chennai – 600053",
+    full: "F2, 1st Floor, Balaji Nagar East, Plot No. 229, Devi Apartments, Kallikuppam, Ambattur, Tamil Nadu – 600053",
   },
   // TODO(client): confirm exact coordinates from Google Business Profile
   geo: { lat: 13.1143, lng: 80.1548 },

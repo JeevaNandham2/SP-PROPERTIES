@@ -23,6 +23,13 @@ test("all 18 public pages have unique SEO metadata and working crawlable links",
     const title = await page.title();
     const description = (await page.locator('meta[name="description"]').getAttribute("content"))!;
     expect(title, path).toContain("SP Properties");
+    if (!path.startsWith("/projects/")) expect(title, path).toContain("Ambattur");
+    expect(description, path).toContain("Ambattur");
+    expect(title, path).not.toMatch(/\bChennai\b|\bhomes\b/i);
+    await expect(page.locator("main"), path).not.toContainText(/\bhomes\b/i);
+    await expect(page.locator("footer"), path).not.toContainText(/\bhomes\b/i);
+    await expect(page.locator("main"), path).not.toContainText(/\bChennai\b/i, { useInnerText: true });
+    await expect(page.locator("footer"), path).not.toContainText(/\bChennai\b/i, { useInnerText: true });
     expect(description.length, path).toBeGreaterThan(50);
     expect(titles.has(title), `Duplicate title on ${path}`).toBe(false);
     expect(descriptions.has(description), `Duplicate description on ${path}`).toBe(false);
@@ -33,6 +40,7 @@ test("all 18 public pages have unique SEO metadata and working crawlable links",
     await expect(page.locator('meta[property="og:title"]')).toHaveAttribute("content", title);
     await expect(page.locator('meta[property="og:description"]')).toHaveAttribute("content", description);
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", `${site.url}/opengraph-image`);
+    await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute("content", "SP Properties — Flats and construction in Ambattur");
     await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
     await expect(page.locator('meta[name="keywords"]')).toHaveCount(0);
     const robotsContent = await page.locator('meta[name="robots"]').evaluateAll((els) => els.map((el) => el.getAttribute("content") || "").join(" "));

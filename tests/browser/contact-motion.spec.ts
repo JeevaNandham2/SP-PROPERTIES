@@ -33,11 +33,11 @@ test("contact topics send the selected requirements to the WhatsApp handoff", as
   await form.getByLabel("Interested location").selectOption("Ambattur");
   await form.getByLabel("Configuration").selectOption("3 BHK");
   await form.getByRole("checkbox").check();
-  for (const topic of ["Build a home", "Plan interiors", "Joint venture", "Buy a home"]) {
+  for (const topic of ["Build a home", "Plan interiors", "Joint venture", "Buy a flat"]) {
     await form.getByRole("button", { name: topic, exact: true }).click();
     await expect(form.getByRole("button", { name: topic, exact: true })).toHaveAttribute("aria-pressed", "true");
     await expect(form.getByLabel("Interested location")).toBeVisible();
-    await expect(form.getByLabel("Configuration")).toHaveCount(topic === "Buy a home" ? 1 : 0);
+    await expect(form.getByLabel("Configuration")).toHaveCount(topic === "Buy a flat" ? 1 : 0);
     await form.getByLabel("Message (optional)").fill("Please share the next steps.");
     await form.getByRole("button", { name: "Send enquiry on WhatsApp" }).click();
     const href = await form.getByRole("link", { name: "Open WhatsApp again" }).getAttribute("href");
@@ -45,7 +45,7 @@ test("contact topics send the selected requirements to the WhatsApp handoff", as
     expect(message).toContain(`Interested in: ${topic}`);
     expect(message).toContain("Location: Ambattur");
     expect(message).toContain("Mobile: 9876543210");
-    expect(message).toContain(`Configuration: ${topic === "Buy a home" ? "3 BHK" : "Not applicable"}`);
+    expect(message).toContain(`Configuration: ${topic === "Buy a flat" ? "3 BHK" : "Not applicable"}`);
     expect(message).toContain("Please share the next steps.");
   }
 });

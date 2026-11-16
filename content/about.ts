@@ -2,7 +2,7 @@ export const aboutServices = [
   {
     slug: 'flat-developers',
     title: 'Apartments',
-    description: 'Thoughtfully planned 2 & 3 BHK homes across Chennai.',
+    description: 'Thoughtfully planned 2 & 3 BHK flats in Ambattur and beyond.',
   },
   {
     slug: 'building-contractor',
@@ -32,7 +32,7 @@ export const aboutPrinciples = [
   },
   {
     title: 'Close to your community',
-    description: 'An Ambattur-based team you can meet, with local knowledge across Chennai.',
+    description: 'An Ambattur-based team you can meet, with local knowledge and practical guidance.',
   },
 ] as const;
 

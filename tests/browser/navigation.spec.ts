@@ -58,7 +58,8 @@ test("About company content and photos remain visible without JavaScript", async
       await photo.scrollIntoViewIfNeeded();
       await expect.poll(() => photo.evaluate((element) => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
     }
-    await expect(page.locator(".about-story-copy")).toContainText("Kallikuppam office");
+    await expect(page.locator(".about-story-copy")).toContainText("real estate company in Ambattur");
+    await expect(page.locator(".about-hero-location")).toContainText("Kallikuppam, Ambattur");
     await expect(page.locator(".about-story-copy")).toContainText("Practical spaces");
     await expect(page.locator('main a[href="/testimonials"], main img[alt*="family"]')).toHaveCount(0);
     await expect(page.getByRole("link", { name: "Plan your home" })).toHaveAttribute("href", "/contact");

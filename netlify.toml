@@ -1,11 +1,20 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  CMS_ENABLED = "true"
 
 # Keep the extensionless URLs already used by the site and its sitemap.
 [build.processing.html]
   pretty_urls = false
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["sharp"]
+
+[[plugins]]
+  package = "./plugins/project-content"

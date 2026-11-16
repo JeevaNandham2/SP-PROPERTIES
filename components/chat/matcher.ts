@@ -21,7 +21,7 @@ function propertyReply(p: Project, bhk: string | undefined, context: ChatContext
   const sizes = (listed.length ? listed : p.configurations).map((c) => `${c.bhk} BHK`).join(" and ");
   const prefix = !listed.length && bhk ? `We don't currently list ${bhk} BHK in ${p.location}. ` : "";
   return {
-    text: `${prefix}We list ${sizes} homes in ${p.location}. Our team can confirm current pricing and availability.`,
+    text: `${prefix}We list ${sizes} flats in ${p.location}. Our team can confirm current pricing and availability.`,
     quick: ["Book a site visit", "Floor plans", WHATSAPP_LABEL],
     topic: p.location, context,
   };
@@ -38,7 +38,7 @@ export function reply(input: string, previous: ChatContext = {}): BotReply {
   // A location or a shared word must not turn an unrelated request into a property answer.
   if (/\b(weather|temperature|forecast|cricket|football|sports|score|politics|president|election|recipe|cooking|movie|movies|song|songs|lyrics|joke|jokes|poem|poetry|horoscope|astrology|python|javascript|coding|programming|homework|exam|essay|bitcoin|crypto|stock|stocks|trading|restaurant|restaurants|hotel|hotels|flight|flights|train|trains|hospital|doctor|medicine|medical|news|job|jobs|career|careers|hiring|rent|rental|rentals|ignore instructions|system prompt|white house)\b/.test(t)) return fallback();
   if (["services", "service", "your services", "what services", "what services are available", "what services do you offer"].includes(t) || ["your services", "services offered", "what services", "which services"].some((phrase) => containsPhrase(t, phrase))) return { text: "Choose the service you would like to discuss.", quick: ["Construction services", "Interior services", "Joint ventures", "Apartments"] };
-  if (t === "locations") return { text: "Select a Chennai location to explore its listed homes.", quick: projects.map((p) => p.location), context: { ...previous, intent: "homes" } };
+  if (t === "locations") return { text: "Start with Ambattur or choose another location to explore flats.", quick: projects.map((p) => p.location), context: { ...previous, intent: "homes" } };
 
   const explicitLocation = findLocation(t);
   const explicitBhk = t.match(/\b(\d{1,2})\s*(?:bhk|bedrooms?|bed\s*rooms?)\b/)?.[1] ?? (previous.intent && /^(2|3)$/.test(t) ? t : undefined);
@@ -72,9 +72,9 @@ export function reply(input: string, previous: ChatContext = {}): BotReply {
   const homeIntent = !best || ["offer", "bhk", "where", "price", "available", "villas"].includes(best.id);
   if (location && homeIntent && !explicitService) return propertyReply(location,bhk,context);
   if (explicitBhk && homeIntent) {
-    if (!["2","3"].includes(explicitBhk)) return { text: `We list 2 and 3 BHK homes. We don't currently list ${explicitBhk} BHK homes. Contact our team to discuss your requirements.`, quick: ["2 BHK", "3 BHK", WHATSAPP_LABEL], context };
+    if (!["2","3"].includes(explicitBhk)) return { text: `We list 2 and 3 BHK flats. We don't currently list ${explicitBhk} BHK flats. Contact our team to discuss your requirements.`, quick: ["2 BHK", "3 BHK", WHATSAPP_LABEL], context };
     const matches = projects.filter((p) => p.configurations.some((c) => String(c.bhk) === explicitBhk));
-    return { text: `${explicitBhk} BHK homes are listed in ${matches.length} Chennai locations. Choose a location for details.`, quick: matches.map((p) => p.location), context };
+    return { text: `${explicitBhk} BHK flats are listed in ${matches.length} locations, including Ambattur. Choose a location for details.`, quick: matches.map((p) => p.location), context };
   }
   if (best) return { text: best.answer, quick: best.id === "where" ? projects.map((p) => p.location) : best.followUps, topic: location?.location ?? (explicitService ? best.question : undefined), context };
   return fallback();

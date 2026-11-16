@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
 import { pageSeo } from "@/content/seo";
+import { locations } from "@/content/projects";
 
 export function pageMetadata(opts: { title: string; description: string; path: string }): Metadata {
   const url = `${site.url}${opts.path}`;
-  const image = { url: `${site.url}/opengraph-image`, width: 1200, height: 630, alt: "SP Properties — Homes and construction in Chennai" };
+  const image = { url: `${site.url}/opengraph-image`, width: 1200, height: 630, alt: "SP Properties — Flats and construction in Ambattur" };
   return {
     title: { absolute: opts.title },
     description: opts.description,
@@ -36,7 +37,7 @@ export function businessSchema() {
       addressCountry: site.address.country,
     },
     // Publish exact coordinates only after the office map pin is confirmed.
-    areaServed: ["Ambattur", "Chennai"],
+    areaServed: locations,
     sameAs: [site.socials.instagram, site.socials.facebook].filter(Boolean),
   };
 }

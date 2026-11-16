@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-16",
+  "status": "Implemented locally and verified",
+  "updates": [
+    {
+      "section": "Homepage Step inside",
+      "change": "Replaced the illustrated building background with the supplied Ayyapakkam project rendering; kept the arched interior slideshow.",
+      "asset": "public/images/projects/ayyapakkam-flats.webp"
+    },
+    {
+      "section": "Services House construction",
+      "change": "Replaced the background single-storey structure with a three-floor apartment building under construction, retaining the two engineers and their plans.",
+      "asset": "public/images/services/apartment-construction-three-floors.webp",
+      "method": "Built-in image_gen editing, followed by WebP encoding for the website",
+      "source": "public/images/services/construction.webp",
+      "prompt": "Use case: precise-object-edit. Asset type: a landscape construction-service illustration for the SP Properties website, 3:2 aspect ratio. Input image: EDIT TARGET, the original scene of two male engineers in white hard hats reviewing a blueprint at a construction site. Primary request: replace ONLY the background single-storey brick structure with a clearly visible THREE-STOREY APARTMENT BUILDING UNDER CONSTRUCTION (exactly ground floor plus two upper floors, three total levels). Preserve the two foreground men, their faces, poses, clothing, helmets, hands, blueprint, table, tablet and tape measure as closely as possible. Set the new apartment building sufficiently farther back that its entire three-storey structure and roofline are visible behind the engineers without cropping off the top; show three distinct levels with reinforced-concrete slabs and columns, partly completed red-brick infill, multiple apartment window openings and modest construction scaffolding. Match the original natural daylight, realistic Indian residential neighbourhood, palms, perspective and photographic textures. The men remain foreground subjects working on the plans. Keep a natural, believable composition and clear building silhouette for a small website card. Photorealistic editorial quality. No labels, signage, logos, watermark, decorative border, UI, text or extra foreground people. Output one finished image.",
+      "generatedOriginal": "C:/Users/Yuvi/.codex/generated_images/01a1e2fb-01be-7a62-8527-e7faf9e9d19f/exec-a7640d7a-74df-4473-a36e-c094a003bb9f.png",
+      "description": "Illustrative image, not an actual project photograph"
+    }
+  ],
+  "verification": {
+    "productionBuild": "Passed, including lint, types and static export",
+    "browserChecks": "8 passed, covering homepage scroll scenes, interior slideshow controls and services",
+    "visualReview": "Both replacements load and display correctly at 390, 768 and 1440 pixels, with no horizontal page overflow or browser errors",
+    "constructionImage": "1536 x 1024 WebP, 268182 bytes; visually verified ground floor plus two upper floors"
+  },
+  "deployment": "Not published; local website changes only"
+}

@@ -43,7 +43,7 @@ export function WhyList() {
               Why Choose <em>Us?</em>
             </>
           }
-          aside="Ten years of building homes in Chennai, with a team you can meet at our Ambattur office."
+          aside="Ten years of building flats, with a team you can meet at our Ambattur office."
         />
         <ol className="wlist" ref={list}>
           {reasons.map((r, i) => (

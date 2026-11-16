@@ -1,0 +1,274 @@
+[
+  {
+    "slug": "flats-in-ambattur",
+    "location": "Ambattur",
+    "configurations": [
+      {
+        "bhk": 2
+      },
+      {
+        "bhk": 3
+      }
+    ],
+    "featured": true,
+    "image": "/images/projects/ambattur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/ambattur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Ambattur with a grey-and-white facade, balconies and stone finishes",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-korattur",
+      "flats-in-thirumullaivoyal",
+      "flats-in-annanur"
+    ]
+  },
+  {
+    "slug": "flats-in-thirumullaivoyal",
+    "location": "Thirumullaivoyal",
+    "configurations": [
+      {
+        "bhk": 2
+      },
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/thirumullaivoyal-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/thirumullaivoyal-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Thirumullaivoyal with a blue-and-white facade and balconies",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      },
+      {
+        "src": "/images/projects/thirumullaivoyal-anna-street.webp",
+        "alt": "SP Properties Anna Street apartment rendering in Thirumullaivoyal with stilt parking and balconies",
+        "caption": "Anna Street exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-ambattur",
+      "flats-in-annanur",
+      "flats-in-korattur"
+    ]
+  },
+  {
+    "slug": "flats-in-annanur",
+    "location": "Annanur",
+    "configurations": [
+      {
+        "bhk": 2
+      },
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/annanur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/annanur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Annanur with a blue-and-white facade, balconies and stilt parking",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-ambattur",
+      "flats-in-thirumullaivoyal",
+      "flats-in-korattur"
+    ]
+  },
+  {
+    "slug": "flats-in-ayyapakkam",
+    "location": "Ayyapakkam",
+    "configurations": [
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/ayyapakkam-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/ayyapakkam-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Ayyapakkam with a white corner facade, balconies and stilt parking",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-ambattur",
+      "flats-in-annanur",
+      "flats-in-thirumullaivoyal"
+    ]
+  },
+  {
+    "slug": "flats-in-perambur",
+    "location": "Perambur",
+    "configurations": [
+      {
+        "bhk": 2
+      }
+    ],
+    "image": "/images/projects/perambur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/perambur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Perambur with a teal-and-white facade, balconies and stone details",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-kolathur",
+      "flats-in-anna-nagar",
+      "flats-in-korattur"
+    ]
+  },
+  {
+    "slug": "flats-in-korattur",
+    "location": "Korattur",
+    "configurations": [
+      {
+        "bhk": 2
+      }
+    ],
+    "image": "/images/projects/korattur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/korattur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Korattur with a blue-and-white facade, balconies and timber accents",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-ambattur",
+      "flats-in-kolathur",
+      "flats-in-anna-nagar"
+    ]
+  },
+  {
+    "slug": "flats-in-kolathur",
+    "location": "Kolathur",
+    "configurations": [
+      {
+        "bhk": 2
+      },
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/kolathur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/kolathur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Kolathur with a grey-and-white facade, glass balconies and warm exterior lighting",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-perambur",
+      "flats-in-korattur",
+      "flats-in-anna-nagar"
+    ]
+  },
+  {
+    "slug": "flats-in-anna-nagar",
+    "location": "Anna Nagar",
+    "configurations": [
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/anna-nagar-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/anna-nagar-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Anna Nagar with a white-and-grey facade, balconies and vertical timber details",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-koyambedu",
+      "flats-in-kolathur",
+      "flats-in-maduravoyal"
+    ]
+  },
+  {
+    "slug": "flats-in-maduravoyal",
+    "location": "Maduravoyal",
+    "configurations": [
+      {
+        "bhk": 2
+      }
+    ],
+    "image": "/images/projects/maduravoyal-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/maduravoyal-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Maduravoyal with an orange-and-white facade, balconies and stilt parking",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-koyambedu",
+      "flats-in-kovur",
+      "flats-in-anna-nagar"
+    ]
+  },
+  {
+    "slug": "flats-in-koyambedu",
+    "location": "Koyambedu",
+    "configurations": [
+      {
+        "bhk": 2
+      }
+    ],
+    "image": "/images/projects/koyambedu-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/koyambedu-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Koyambedu with a white-and-grey facade, balconies and vertical timber details",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-anna-nagar",
+      "flats-in-maduravoyal",
+      "flats-in-kovur"
+    ]
+  },
+  {
+    "slug": "flats-in-kovur",
+    "location": "Kovur",
+    "configurations": [
+      {
+        "bhk": 3
+      }
+    ],
+    "image": "/images/projects/kovur-flats.webp",
+    "gallery": [
+      {
+        "src": "/images/projects/kovur-flats.webp",
+        "alt": "SP Properties flat exterior rendering in Kovur with a corner facade, balconies and stone finishes",
+        "caption": "Flat exterior rendering",
+        "kind": "rendering"
+      }
+    ],
+    "nearby": [
+      "flats-in-maduravoyal",
+      "flats-in-koyambedu",
+      "flats-in-ambattur"
+    ]
+  }
+]

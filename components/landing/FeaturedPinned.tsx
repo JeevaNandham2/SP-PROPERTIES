@@ -34,10 +34,10 @@ export function FeaturedPinned() {
     <section className="feat dark" id="projects" aria-labelledby="feat-title" data-static={staticMode}>
       <div className="feat__track" ref={track} style={{ height: staticMode ? 'auto' : '340svh' }}>
         <div className="feat__stick" ref={scene.container}>
-          <Image fill sizes="100vw" className="feat__bg" src="/landing/images/g2-night.svg" alt="" loading="lazy" />
+          <Image fill sizes="100vw" className="feat__bg" src="/images/projects/ayyapakkam-flats.webp" alt="SP Properties apartment exterior rendering in Ayyapakkam, presented by our Ambattur team" loading="lazy" />
           <div className="wrap feat__grid scene-content" ref={scene.content}>
             <div className="feat__box">
-              <p className="lbl">Inside our homes</p>
+              <p className="lbl">Inside our flats</p>
               <h2 className="h2" id="feat-title" style={{ margin: '22px 0' }}>
                 Step inside.<br /><em className="g">Feel at home.</em>
               </h2>

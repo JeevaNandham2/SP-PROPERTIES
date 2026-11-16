@@ -43,8 +43,8 @@ export default function AmbatturPage() {
       <section className="bg-soft py-10 md:py-16">
         <Container>
           <div className="flex flex-wrap items-center justify-between gap-4" data-reveal>
-            <h2 className="font-display text-3xl text-ink">Nearby homes</h2>
-            <Link href="/projects" className="text-sm underline underline-offset-4">All Chennai locations</Link>
+            <h2 className="font-display text-3xl text-ink">Nearby flats</h2>
+            <Link href="/projects" className="text-sm underline underline-offset-4">All flat locations</Link>
           </div>
           <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {nearby.map((p) => <ProjectCard key={p.slug} project={p} />)}
@@ -53,7 +53,7 @@ export default function AmbatturPage() {
       </section>
       <section className="py-10 md:py-16">
         <Container className="max-w-[900px]">
-          <SectionHeader eyebrow="Quick answers" title="Planning a home in Ambattur" className="mb-6" />
+          <SectionHeader eyebrow="Quick answers" title="Planning your flat purchase in Ambattur" className="mb-6" />
           <div data-reveal><Accordion items={ambatturFaqs} /></div>
         </Container>
       </section>

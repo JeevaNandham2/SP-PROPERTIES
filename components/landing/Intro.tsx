@@ -9,16 +9,16 @@ export function Intro() {
   const stats = [
     { value: `${site.yearsOfExperience}`, plus: true, label: 'Years building' },
     { value: `${locations.length}`, label: 'Locations' },
-    { value: '2 & 3', label: 'BHK homes' },
+    { value: '2 & 3', label: 'BHK flats' },
   ];
   return (
     <section className="sec" id="discover" aria-labelledby="intro-title">
       <div className="wrap intro">
         <Reveal className="intro__ph">
-          <Image width={1600} height={1200} sizes="(max-width: 860px) 100vw, 50vw"
+          <Image width={1277} height={1231} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 860px) 560px, (max-width: 1240px) calc((100vw - 136px) * .475), 524px"
             className="wipe"
-            src="/landing/images/intro.jpg"
-            alt="Contemporary home exterior with clean lines and large glass openings"
+            src="/images/about/apartment-exterior.webp"
+            alt="SP Properties apartment exterior rendering with three balcony levels, grey and cream finishes, and warm lighting"
             loading="lazy"
           />
 
@@ -26,9 +26,9 @@ export function Intro() {
         <Reveal delay={1}>
           <p className="lbl">About us</p>
           <h2 className="h2 intro__h" id="intro-title">
-            Construction Company <em>in Chennai</em>
+            Construction Company <em>in Ambattur</em>
           </h2>
-          <p className="muted lead">Based in Ambattur. Building homes across Chennai.</p>
+          <p className="muted lead">Flats, construction and interiors. Built around you.</p>
           <ul className="stats" aria-label="SP Properties in numbers">
             {stats.map((s) => (
               <li key={s.label}>

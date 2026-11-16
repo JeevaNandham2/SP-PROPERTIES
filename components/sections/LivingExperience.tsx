@@ -25,7 +25,7 @@ const scenes = [
     alt: "A contemporary kitchen with space for daily cooking",
     eyebrow: "A place that feels like you",
     title: "Your life. Beautifully at home.",
-    text: "Discover 2 and 3 BHK homes in Ambattur and across Chennai. Find the space for your next chapter.",
+    text: "Discover 2 and 3 BHK flats in Ambattur and beyond. Find the space for your next chapter.",
   },
 ];
 

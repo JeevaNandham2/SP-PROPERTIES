@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-container grid-cols-2 gap-8 px-5 py-12 md:px-12 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr]">
         <div className="col-span-2 flex items-center gap-5 md:col-span-1 md:block">
           <Image src="/brand/logo-full.png" alt={`${site.name} — ${site.tagline}`} width={270} height={480} sizes="(max-width: 767px) 54px, 72px" loading="eager" className="h-24 w-auto shrink-0 md:mb-4 md:h-32" />
-          <p className="text-[15px]">Homes &amp; construction in Chennai. Based in Ambattur.</p>
+          <p className="text-[15px]">Flats &amp; construction in Ambattur. A local team for your next move.</p>
         </div>
         <div>
           <h2 className="mb-4 text-eyebrow uppercase text-gold">Pages</h2>

@@ -32,9 +32,9 @@ test("project cards respect reduced motion", async ({ page }) => {
 
 test("construction keywords appear in metadata and visible content", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle(/Construction Company in Chennai/);
+  await expect(page).toHaveTitle(/Flats in Ambattur & Construction/);
   await expect(page.locator("#intro-title")).toContainText("Construction Company");
   await page.goto("/services");
-  await expect(page).toHaveTitle(/Building Contractors in Chennai/);
-  await expect(page.locator("h1")).toContainText(/building contractors in Chennai/i);
+  await expect(page).toHaveTitle(/Building Contractors in Ambattur/);
+  await expect(page.locator("h1")).toContainText(/building contractors in Ambattur/i);
 });

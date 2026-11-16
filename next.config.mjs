@@ -14,7 +14,11 @@ const nextConfig = {
 // Keep Fast Refresh separate from the finished folder uploaded to Netlify.
 const configureNext = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
-    return { ...nextConfig, distDir: ".next-dev" };
+    return {
+      ...nextConfig,
+      distDir: ".next-dev",
+      async rewrites() { return [{ source: "/admin", destination: "/admin/index.html" }]; },
+    };
   }
 
   return {

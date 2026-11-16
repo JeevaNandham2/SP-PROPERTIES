@@ -70,7 +70,7 @@ test("chat recovers from bad storage and restart cancels delayed replies", async
   await expect(dialog.getByRole("log").locator("p")).toHaveCount(1);
   await dialog.getByLabel("Type your question").fill("Anna Nagar");
   await dialog.getByRole("button", { name: "Send", exact: true }).click();
-  await expect(dialog.getByRole("log")).toContainText("homes in Anna Nagar");
+  await expect(dialog.getByRole("log")).toContainText("flats in Anna Nagar");
   await expect(dialog.getByRole("link", { name: "Contact on WhatsApp", exact: true }).last()).toHaveAttribute("href", /Anna%20Nagar/);
   await page.keyboard.press("Escape");
   await expect(dialog).toHaveCount(0);
@@ -106,7 +106,7 @@ test("all exported pages, metadata and Netlify image sources respond", async ({ 
     expect(response.status(), path).toBe(200);
   }
   expect((await request.get("/projects/not-a-project")).status()).toBe(404);
-  expect((await request.get("/.netlify/images?url=%2Fimages%2Fhero-panorama.webp&w=640&q=90&fm=webp")).status()).toBe(200);
+  expect((await request.get("/.netlify/images?url=%2Fimages%2Fprojects%2Fambattur-flats.webp&w=640&q=90&fm=webp")).status()).toBe(200);
 });
 
 test("secondary pages stay within a narrow mobile viewport without content placeholders", async ({ page }) => {
@@ -128,7 +128,7 @@ test("landing enquiry retains a usable link if the WhatsApp popup is blocked", a
   const form = page.locator("#contact form");
   await form.getByLabel("Full Name").fill("Test enquiry");
   await form.getByLabel("Phone Number").fill("9876543210");
-  await form.getByLabel("Property Interest").selectOption("3 BHK Homes");
+  await form.getByLabel("Property Interest").selectOption("3 BHK Flats");
   await form.getByRole("button", { name: "Send Enquiry", exact: true }).click();
-  await expect(form.getByRole("link", { name: "Open WhatsApp and press Send" })).toHaveAttribute("href", /3%20BHK%20Homes/);
+  await expect(form.getByRole("link", { name: "Open WhatsApp and press Send" })).toHaveAttribute("href", /3%20BHK%20Flats/);
 });

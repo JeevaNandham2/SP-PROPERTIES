@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-16",
+  "source": "SP_Properties_Website_Corrections.pdf (15 November 2026)",
+  "status": "Implemented locally with the supplied project images; verified production export",
+  "corrections": [
+    {
+      "request": "Replace Homes with Flats or Apartments across the website",
+      "status": "Implemented",
+      "details": "Updated visible headings, property cards, calls to action, form choices, chatbot replies, footer copy, metadata and social-sharing images. Home navigation, construction/lifestyle wording and compatible stored chat intent keys remain appropriate to their context."
+    },
+    {
+      "request": "Keep one project filter",
+      "status": "Verified",
+      "details": "The supplied checkout already contained one filter group. Kept a single All flats / 2 BHK / 3 BHK control, verified that it updates both the map and property cards, and made unsupported BHK query values fall back to All flats."
+    },
+    {
+      "request": "Add SP Properties project images and replace old images with the newly supplied assets",
+      "status": "Implemented for all supplied images",
+      "details": "Integrated 12 supplied exterior renderings across all 11 locations, including two images for Thirumullaivoyal. Converted them to WebP and added responsive galleries with captions, alt text and keyboard controls. The homepage collections, location deck, project cards and flat-development service use the new images. Renderings are identified accurately. Removed 60 superseded, unreferenced project assets (8,722,306 bytes) after checking source references; the original supplied JPEGs remain intact. Restored the original hero-panorama.webp image and layout at the user's follow-up request.",
+      "assetMapping": [
+        {
+          "source": "Ambattur Flat.jpg",
+          "location": "Ambattur",
+          "output": "public/images/projects/ambattur-flats.webp"
+        },
+        {
+          "source": "Anna Nagar flat.jpg",
+          "location": "Anna Nagar",
+          "output": "public/images/projects/anna-nagar-flats.webp"
+        },
+        {
+          "source": "Annanur Flat.jpg",
+          "location": "Annanur",
+          "output": "public/images/projects/annanur-flats.webp"
+        },
+        {
+          "source": "Iyappakkam Flat.jpg",
+          "location": "Ayyapakkam",
+          "output": "public/images/projects/ayyapakkam-flats.webp",
+          "note": "Mapped the supplied filename to the existing Ayyapakkam location."
+        },
+        {
+          "source": "korattur flat.jpg",
+          "location": "Korattur",
+          "output": "public/images/projects/korattur-flats.webp"
+        },
+        {
+          "source": "Kovur Flat.jpg",
+          "location": "Kovur",
+          "output": "public/images/projects/kovur-flats.webp"
+        },
+        {
+          "source": "Koyambedu Flat.jpg",
+          "location": "Koyambedu",
+          "output": "public/images/projects/koyambedu-flats.webp"
+        },
+        {
+          "source": "Maduravoyal Flat.jpg",
+          "location": "Maduravoyal",
+          "output": "public/images/projects/maduravoyal-flats.webp"
+        },
+        {
+          "source": "perambur Flat.jpg",
+          "location": "Perambur",
+          "output": "public/images/projects/perambur-flats.webp"
+        },
+        {
+          "source": "Thirumullaivoyal flat.jpg",
+          "location": "Thirumullaivoyal",
+          "output": "public/images/projects/thirumullaivoyal-flats.webp"
+        },
+        {
+          "source": "Thirumullaivoyal podalam anna Street G+5.jpg",
+          "location": "Thirumullaivoyal",
+          "output": "public/images/projects/thirumullaivoyal-anna-street.webp"
+        },
+        {
+          "source": "Kolathur flat.jpg",
+          "location": "Kolathur",
+          "output": "public/images/projects/kolathur-flats.webp"
+        }
+      ]
+    },
+    {
+      "request": "Make Ambattur the primary SEO focus on every page",
+      "status": "Implemented",
+      "details": "Updated main-page titles, descriptions, headings, keyword themes, relevant alt text, schema descriptions and both social preview images. All 18 page descriptions mention Ambattur. Other location pages retain their correct neighbourhood names in titles and H1s, with Ambattur identified as the team's base. Accurate address and regional coverage references remain unchanged."
+    }
+  ],
+  "validation": {
+    "typecheck": "Passed",
+    "productionBuild": "Passed, including Next.js lint and type checks",
+    "unitTests": "26 passed",
+    "browserTests": "Initial regression run: 55 of 56 checks passed; one stale About-page text assertion was updated and passed its targeted rerun. After replacing the images, all 23 affected gallery, metadata, link, layout, homepage and form checks passed. After the final hero layout adjustment, all four homepage and scroll-scene checks passed at 360, 390, 768 and 1440 pixels.",
+    "seo": "All 18 public pages checked for unique metadata, correct canonicals, structured data, social metadata, working internal links and image alt attributes.",
+    "responsiveReviewWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "visualReview": "Reviewed homepage, contact, projects, testimonials, project galleries and social preview screenshots. Follow-up work restored the original wide hero at the user's request and improved full-image display in cards, galleries and responsive grids.",
+    "previewLimit": "The in-app browser access host was unavailable. Local Edge browser tests and their screenshots supplied browser verification.",
+    "deployment": "Not published; the production export is in dist. No commit or push was made."
+  },
+  "followUp": {
+    "date": "2026-11-16",
+    "request": "Restore the original homepage hero image and layout; display images properly and responsively throughout the grids.",
+    "changes": [
+      "Restored the original wide hero image, background positioning, gradient treatment and responsive height; retained the corrected Flats wording and Ambattur focus.",
+      "Changed project, collection, location, service and client photo cards to preserve complete images without cropping, stretching or hover zoom.",
+      "Adjusted image frame proportions and reserved space for captions; enlarged project detail galleries and kept full images in their thumbnails.",
+      "Corrected the introduction image dimensions to match the supplied asset."
+    ],
+    "verification": {
+      "responsiveWidths": [
+        320,
+        390,
+        768,
+        1024,
+        1440
+      ],
+      "imageLayoutReview": "20 page/viewport checks and 150 image checks passed: images loaded without cropping, no horizontal page overflow, no browser errors. Screenshots reviewed for the hero, collections, introduction, client grids, location deck, project cards, galleries and services.",
+      "browserTests": "All 30 existing checks passed: 27 homepage, project, gallery, carousel and service checks, plus three client stories and photo viewer checks.",
+      "productionBuild": "Passed, including Next.js lint, type checks and static export. The exported hero image matches the restored source.",
+      "deployment": "Local changes only; no publication, commit or push."
+    }
+  },
+  "projectEnquiryAndKolathur": {
+    "date": "2026-11-16",
+    "request": "Remove repeated location/configuration options after choosing a project location, and use the supplied Kolathur flat image.",
+    "changes": [
+      "Project-page enquiry forms show name, mobile number and consent without location/configuration selectors or an optional message field.",
+      "The current project location is carried into the WhatsApp enquiry automatically. Navigating to another project resets the form context. Configuration is left as Not specified instead of assuming 2 BHK.",
+      "The general contact form still supports location/configuration choices where no project has been selected.",
+      "Imported the supplied Kolathur image and encoded a 1086 x 1448 WebP (229446 bytes). It replaces the placeholder in the gallery, location cards, homepage deck and nearby projects. The original JPEG remains intact."
+    ],
+    "validation": "Production build passed, including lint/types. All 13 targeted browser checks passed: project galleries, absence of repeated selectors across all project pages, correct WhatsApp location after navigation, required-field validation and the general contact form. Reviewed the Kolathur gallery and simplified form at 390 and 1440 pixels.",
+    "deployment": "Local changes only; not published."
+  },
+  "projectPageSimplification": {
+    "date": "2026-11-16",
+    "request": "Remove the Flat sizes row, remove the optional message box from project enquiries, and remove remaining Chennai wording on pages and sections.",
+    "changes": [
+      "Removed the Flat sizes table row on all 11 project pages; the location row shows only the selected neighbourhood.",
+      "Project enquiry forms require only name, mobile number and contact consent. The selected location is attached automatically and WhatsApp submission still works without a message.",
+      "Updated the About and Contact pages, homepage collection, project location labels, opening screen, globe labels, FAQ answers and visible office/footer address to focus on Ambattur or the applicable neighbourhood.",
+      "Retained the street address, postcode, Tamil Nadu region and existing map link; the visible address now ends with Ambattur, Tamil Nadu rather than the city suffix.",
+      "Aligned service and location schema with the displayed locality names."
+    ],
+    "verification": "Production build and all 17 targeted browser checks passed. Reviewed simplified enquiry panels at 390 and 1440 pixels. Verified all 18 public pages have no visible Chennai wording, all 11 project pages omit the Flat sizes row and message textarea, and WhatsApp enquiries retain the current project location.",
+    "deployment": {
+      "file": "sp-properties-deployment-2026-11-16-v2.zip",
+      "status": "Verified deployment ZIP ready; not uploaded or published."
+    }
+  },
+  "homepageIntroImage": {
+    "date": "2026-11-16",
+    "request": "Replace the homepage About Us image with the supplied apartment exterior and display it responsively.",
+    "source": "C:/Users/Yuvi/Downloads/landing page 2bhk image  1.jpg",
+    "asset": "public/images/about/apartment-exterior.webp",
+    "dimensions": "1277 x 1231",
+    "changes": [
+      "Used the supplied grey-and-cream apartment rendering with warm lighting in the homepage About Us section.",
+      "Removed the fixed landscape aspect ratio so the complete building and surrounding scene remain visible without cropping or distortion.",
+      "Matched intrinsic image dimensions and responsive sizes, retained the rounded frame, and centered the image in the stacked tablet layout."
+    ],
+    "verification": "Production build and all four homepage browser checks passed. The new image preserves its full proportions at 320, 390, 768, 861, 1024 and 1440 pixels, with no horizontal overflow or browser errors. All ZIP files match the production export.",
+    "deployment": {
+      "file": "sp-properties-deployment-2026-11-16-v3.zip",
+      "status": "Prepared only; not uploaded or published."
+    }
+  },
+  "homepageCollectionImages": {
+    "date": "2026-11-16",
+    "request": "Use the first supplied image for the 3 BHK card, the second for Premium Apartments and the third for Residential Projects.",
+    "assets": [
+      {
+        "source": "C:\\Users\\Yuvi\\Downloads\\landing page 3bhk.jpg",
+        "output": "public/images/collections/three-bhk-flats.webp",
+        "width": 1199,
+        "height": 1312,
+        "bytes": 180178
+      },
+      {
+        "source": "C:\\Users\\Yuvi\\Downloads\\landing page premium aprt.jpg",
+        "output": "public/images/collections/premium-apartments.webp",
+        "width": 1162,
+        "height": 1353,
+        "bytes": 144214
+      },
+      {
+        "source": "C:\\Users\\Yuvi\\Downloads\\landing page residental.jpg",
+        "output": "public/images/collections/residential-projects.webp",
+        "width": 1080,
+        "height": 1456,
+        "bytes": 186388
+      }
+    ],
+    "sourceNote": "Used the latest files in Downloads as directed. The Residential source saved there has grey and wood finishes; this difference from the yellow-accented chat attachment was noted before implementation.",
+    "changes": [
+      "Replaced the images and alt text for the 3 BHK Flats, Premium Apartments and Residential Projects collection cards.",
+      "Adjusted the collection image frame to a portrait ratio while preserving object-fit: contain, so full building elevations remain visible and card rows align.",
+      "Retained existing card headings, descriptions, enquiry links and the 2 BHK image."
+    ],
+    "verification": "Production build and four homepage browser tests passed. All 20 card/viewport checks passed at 320, 390, 768, 1024 and 1440 pixels. New images load in the correct cards, display fully without cropping, and enquiry links are preserved. No horizontal overflow or browser errors. All ZIP entries match the production export.",
+    "deployment": {
+      "file": "sp-properties-deployment-2026-11-16-v4.zip",
+      "status": "Prepared only; not uploaded or published."
+    }
+  },
+  "projectFlatTypeChoice": {
+    "date": "2026-11-16",
+    "request": "Add a Flat type choice with 2 BHK and 3 BHK to the project enquiry section and send the selected choice with the enquiry.",
+    "changes": [
+      "Added a required Flat type radio group to all project enquiry forms, with large selectable 2 BHK and 3 BHK choices and keyboard support.",
+      "The visitor chooses a flat type before submitting. The selected choice and current project location are included in the WhatsApp enquiry.",
+      "Changing the selection clears the previous WhatsApp fallback link; opening another project resets the form.",
+      "Kept the location automatic and the optional project message box removed. General contact forms retain their existing options."
+    ],
+    "verification": "Production build passed without lint warnings. All 27 unit tests and 14 browser tests passed. All 11 project enquiry forms offer required 2 BHK / 3 BHK choices. Verified both values in WhatsApp enquiries, keyboard selection, validation, clearing outdated links and resetting the form on location changes. Mobile and desktop screenshots reviewed. Every ZIP entry matches the production export.",
+    "deployment": {
+      "file": "sp-properties-deployment-2026-11-16-v5.zip",
+      "status": "Prepared only; not uploaded or published."
+    }
+  }
+}

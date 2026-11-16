@@ -3,47 +3,47 @@ import type { Project } from "./projects";
 /** Page intent and search wording. Keywords belong in useful copy, not a meta-keywords tag. */
 export const pageSeo = {
   home: {
-    title: "Construction Company in Chennai | SP Properties",
-    description: "SP Properties is a construction company in Chennai. Explore apartments for sale in Ambattur, 2 & 3 BHK homes, villa construction and interiors.",
-    keyword: "construction company in Chennai",
+    title: "Flats in Ambattur & Construction | SP Properties",
+    description: "Explore 2 & 3 BHK flats in Ambattur with SP Properties. Discuss apartments for sale, house construction, interiors and site visits with our local team.",
+    keyword: "flats in Ambattur",
   },
   about: {
-    title: "About SP Properties | Builders in Ambattur, Chennai",
-    description: "Meet SP Properties, a real estate company in Ambattur with 10 years of experience in Chennai homes, apartment development and house construction.",
+    title: "About SP Properties | Builders in Ambattur",
+    description: "Meet SP Properties, builders in Ambattur with 10 years of experience in flat development, house construction and interiors. Visit our Kallikuppam team.",
     keyword: "builders in Ambattur",
   },
   projects: {
-    title: "2 & 3 BHK Flats in Chennai | SP Properties",
-    description: "Explore new apartments in Chennai across 11 locations, including Ambattur and Anna Nagar. Ask SP Properties for 2 & 3 BHK floor plans, prices and site visits.",
-    keyword: "flats in Chennai",
+    title: "2 & 3 BHK Flats in Ambattur & Beyond | SP Properties",
+    description: "Find 2 & 3 BHK flats in Ambattur and explore 11 locations with SP Properties. Ask our Ambattur team for current availability, floor plans and site visits.",
+    keyword: "2 & 3 BHK flats in Ambattur",
   },
   services: {
-    title: "Building Contractors in Chennai | SP Properties",
-    description: "Building contractors in Chennai for house and villa construction, apartment development, interiors and joint ventures. Discuss your plot and budget with us.",
-    keyword: "building contractors in Chennai",
+    title: "Building Contractors in Ambattur | SP Properties",
+    description: "Building contractors in Ambattur for house and villa construction, flat development, interiors and joint ventures. Discuss your plot and budget with our team.",
+    keyword: "building contractors in Ambattur",
   },
   contact: {
-    title: "Contact SP Properties | Ambattur Office, Chennai",
+    title: "Contact SP Properties | Ambattur Office",
     description: "Contact SP Properties in Ambattur for flat prices, floor plans, villa construction or a site visit. Call or WhatsApp +91 95001 24126 to discuss your needs.",
     keyword: "real estate office in Ambattur",
   },
   ambattur: {
     title: "Apartments for Sale in Ambattur | SP Properties",
-    description: "Explore residential apartments in Ambattur with SP Properties. Compare 2 & 3 BHK homes, ask about prices and availability, or plan house construction.",
+    description: "Explore residential apartments in Ambattur with SP Properties. Compare 2 & 3 BHK flats, ask about prices and availability, or plan house construction.",
     keyword: "apartments for sale in Ambattur",
   },
   testimonials: {
-    title: "SP Properties Client Stories & Testimonials | Chennai",
-    description: "Meet the families behind SP Properties, builders in Ambattur, Chennai. Explore client stories and guidance for choosing your 2 or 3 BHK home.",
-    keyword: "SP Properties testimonials",
+    title: "SP Properties Testimonials | Builders in Ambattur",
+    description: "Meet the families behind SP Properties, builders in Ambattur. Explore client stories and guidance from our local team for choosing your 2 or 3 BHK flat.",
+    keyword: "SP Properties Ambattur testimonials",
   },
 } as const;
 
 export function locationSeo(project: Project) {
-  const homes = `${project.configurations.map((c) => c.bhk).join(" & ")} BHK`;
+  const configuration = `${project.configurations.map((c) => c.bhk).join(" & ")} BHK`;
   return {
-    title: `${homes} Flats in ${project.location} | SP Properties`,
-    description: `Explore ${homes} flats for sale in ${project.location}, Chennai with SP Properties. Request current prices, floor plans, availability and a site visit.`,
+    title: `${configuration} Flats in ${project.location} | SP Properties`,
+    description: `Explore ${configuration} flats in ${project.location} with SP Properties, based in Ambattur. Request current prices, floor plans, availability and a site visit.`,
     path: `/projects/${project.slug}`,
   };
 }

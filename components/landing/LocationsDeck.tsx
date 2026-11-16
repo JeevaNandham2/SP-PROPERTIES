@@ -66,9 +66,9 @@ export function LocationsDeck() {
           <div className="wrap scene-content" ref={scene.content}>
             <div className="deck__head">
               <div>
-                <p className="lbl">{n} Chennai locations</p>
+                <p className="lbl">{n} locations to explore</p>
                 <h2 className="h2" id="deck-title" style={{ marginTop: 16 }}>
-                  Homes Across <em>Chennai</em>
+                  Ambattur <em>& Beyond</em>
                 </h2>
               </div>
 
@@ -111,7 +111,7 @@ export function LocationsDeck() {
                     aria-hidden={!on || undefined}
                     onClick={() => !on && go(i)}
                   >
-                    <Image sizes="270px" src={loc.image} alt={`Illustrative Indian-style home exterior for ${bhkLabel(loc.configurations)} listings in ${loc.name}, Chennai`} loading="lazy" width={540} height={432} />
+                    <Image sizes="270px" src={loc.image} alt={loc.imageAlt ?? `Architectural concept for ${bhkLabel(loc.configurations)} flats in ${loc.name}, presented by SP Properties, Ambattur`} loading="lazy" width={540} height={432} />
                     <div className="fc__bd">
                       <h3>{loc.name}</h3>
                       <div className="fc__meta">
@@ -123,7 +123,7 @@ export function LocationsDeck() {
                           target="_blank"
                           rel="noopener noreferrer"
                           href={whatsappLink(
-                            `Hi SP Properties, please share details of your ${bhkLabel(loc.configurations)} homes in ${loc.name}.`,
+                            `Hi SP Properties, please share details of your ${bhkLabel(loc.configurations)} flats in ${loc.name}.`,
                           )}
                         >
                           Enquire
@@ -134,7 +134,7 @@ export function LocationsDeck() {
                 );
               })}
             </div>
-            {staticMode && <div className="deck__controls" role="group" aria-label="Browse Chennai locations">
+            {staticMode && <div className="deck__controls" role="group" aria-label="Browse flat locations">
               <button type="button" onClick={() => go(active - 1)} disabled={active === 0} aria-label="Previous location"><ArrowLeft size={18} /></button>
               <span aria-live="polite">{active + 1} / {n} <span className="sr-only">{locations[active].name}</span></span>
               <button type="button" onClick={() => go(active + 1)} disabled={active === n - 1} aria-label="Next location"><ArrowRight size={18} /></button>

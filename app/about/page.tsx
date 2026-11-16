@@ -29,12 +29,12 @@ export default function AboutPage() {
             <div className="about-hero-copy" data-reveal>
               <Eyebrow>About SP Properties</Eyebrow>
               <h1 id="about-title">Builders in Ambattur.<br /><em>Built around you.</em></h1>
-              <p>From your first apartment to a home built on your own land, we help you find your place in Chennai.</p>
+              <p>From your first apartment to a home built on your own land, our Ambattur team helps you find your place.</p>
               <div className="about-actions">
                 <ButtonLink href="/contact" variant="gold">Talk to our team <ArrowUpRight size={17} aria-hidden="true" /></ButtonLink>
                 <a className="about-text-link" href="#about-story">Our story <ArrowDown size={17} aria-hidden="true" /></a>
               </div>
-              <p className="about-hero-location"><MapPin size={16} aria-hidden="true" /> Kallikuppam, Ambattur · Chennai</p>
+              <p className="about-hero-location"><MapPin size={16} aria-hidden="true" /> Kallikuppam, Ambattur</p>
               <a className="about-leadership-link" href="#about-leadership">
                 <span><small>Our Managing Directors</small><strong>{aboutLeadership.map((director) => director.name).join(' & ')}</strong></span>
                 <ArrowDown size={18} aria-hidden="true" />
@@ -49,12 +49,12 @@ export default function AboutPage() {
                 </p>
                 <p className="about-profile-statement">Built around people.<br /><em>Grounded in experience.</em></p>
                 <div className="about-profile-footer">
-                  <p>Ambattur roots.<br />Chennai reach.</p>
+                  <p>Ambattur roots.<br />Local expertise.</p>
                   <Image src="/brand/logo-full.png" alt="SP Properties" width={270} height={480} sizes="48px" className="about-profile-logo" />
                 </div>
               </div>
               <dl className="about-experience-stats" aria-label="SP Properties at a glance">
-                <div><dt>Chennai locations</dt><dd>{projects.length}</dd></div>
+                <div><dt>Locations to explore</dt><dd>{projects.length}</dd></div>
                 <div><dt>Core services</dt><dd>{aboutServices.length}</dd></div>
               </dl>
             </aside>
@@ -73,9 +73,9 @@ export default function AboutPage() {
           </figure>
           <div className="about-story-copy" data-reveal>
             <Eyebrow>Who we are</Eyebrow>
-            <h2 id="about-story-title">Local roots.<br /><em>Thoughtful homes.</em></h2>
+            <h2 id="about-story-title">Local roots.<br /><em>Thoughtful apartments.</em></h2>
             <p>A home is more than an address. It is where everyday routines, family moments and future plans come together.</p>
-            <p>From our Kallikuppam office, we help you find, build and shape your home in Chennai. Practical spaces, thoughtful details and a team you can speak to in person are at the heart of our approach.</p>
+            <p>As a real estate company in Ambattur, we help you find, build and shape your space. Practical spaces, thoughtful details and a team you can speak to in person are at the heart of our approach.</p>
             <Link className="about-text-link about-story-link" href="/projects">Find your neighbourhood <ArrowUpRight size={18} aria-hidden="true" /></Link>
           </div>
         </Container>

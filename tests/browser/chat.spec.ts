@@ -10,7 +10,7 @@ for (const width of [390, 1440]) {
     await expect(dialog).toContainText("Property & construction assistant");
     await dialog.getByLabel("Type your question").fill("2 BHK in Ambattur");
     await dialog.getByRole("button", { name: "Send", exact: true }).click();
-    await expect(dialog.locator('[data-sender="bot"]').last()).toContainText("2 BHK homes in Ambattur");
+    await expect(dialog.locator('[data-sender="bot"]').last()).toContainText("2 BHK flats in Ambattur");
     await dialog.getByLabel("Type your question").fill("What is the weather in Anna Nagar?");
     await dialog.getByRole("button", { name: "Send", exact: true }).click();
     const last = dialog.locator('[data-sender="bot"]').last();
@@ -37,7 +37,7 @@ test("assistant retains a relevant enquiry across follow-ups and reloads", async
   let dialog = page.getByRole("dialog", { name: "Chat with SP Properties" });
   await dialog.getByLabel("Type your question").fill("3 BHK in Anna Nagar");
   await dialog.getByRole("button", { name: "Send", exact: true }).click();
-  await expect(dialog.locator('[data-sender="bot"]').last()).toContainText("3 BHK homes in Anna Nagar");
+  await expect(dialog.locator('[data-sender="bot"]').last()).toContainText("3 BHK flats in Anna Nagar");
   await page.reload();
   await page.getByRole("button", { name: "Open chat" }).click();
   dialog = page.getByRole("dialog", { name: "Chat with SP Properties" });

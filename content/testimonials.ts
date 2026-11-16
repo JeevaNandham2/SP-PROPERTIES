@@ -36,23 +36,23 @@ export const clientStories = [
 export const clientPriorities = [
   {
     id: "space", label: "Space for my family", title: "Room for your everyday.",
-    description: "Explore 2 & 3 BHK homes around your family's needs. Discuss layouts, room sizes and the way you want to live.",
+    description: "Explore 2 & 3 BHK flats around your family's needs. Discuss layouts, room sizes and the way you want to live.",
     points: ["2 & 3 BHK options", "Floor plan discussions"],
-    link: "/projects", linkLabel: "Explore Chennai homes",
-    enquiry: "Hi SP Properties, I am looking for a 2 or 3 BHK home for my family. Please help me compare layouts and current availability.",
+    link: "/projects", linkLabel: "Explore flats in Ambattur",
+    enquiry: "Hi SP Properties, I am looking for a 2 or 3 BHK flat for my family. Please help me compare layouts and current availability.",
   },
   {
     id: "location", label: "The right location", title: "Closer to what matters.",
-    description: "Start with your preferred neighbourhood, daily commute and family routines. Explore our 11 Chennai locations and arrange a site visit.",
-    points: ["11 Chennai neighbourhoods", "Site visits with our team"],
+    description: "Start with your preferred neighbourhood, daily commute and family routines. Explore Ambattur and our other locations and arrange a site visit.",
+    points: ["Ambattur + 10 neighbourhoods", "Site visits with our team"],
     link: "/projects#location-map", linkLabel: "Find your neighbourhood",
-    enquiry: "Hi SP Properties, I would like help choosing a home location in Chennai and arranging a site visit.",
+    enquiry: "Hi SP Properties, I would like help comparing Ambattur with other flat locations and arranging a site visit.",
   },
   {
     id: "guidance", label: "Clarity before I decide", title: "Your questions, welcomed.",
     description: "Buying a 2 or 3 BHK flat in Ambattur? Ask our team for current prices, floor plans and project details before your site visit.",
     points: ["Current availability and prices", "Project details explained"],
     link: "/contact", linkLabel: "Contact our Ambattur team",
-    enquiry: "Hi SP Properties, I would like to discuss current prices, availability and project details before choosing a home.",
+    enquiry: "Hi SP Properties, I would like to discuss current prices, availability and project details before choosing a flat.",
   },
 ] as const;

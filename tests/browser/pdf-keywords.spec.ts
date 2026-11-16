@@ -4,14 +4,14 @@ test("PDF keywords match relevant pages, and FAQ schema matches visible answers"
   await page.goto("/");
   await expect(page.locator("#properties")).toContainText("2 BHK flats in Ambattur");
   await expect(page.locator("#properties")).toContainText("3 BHK flats in Ambattur");
-  await expect(page.locator("#home-hero-title")).toHaveText("A place to live.A space to belong.");
+  await expect(page.locator("#home-hero-title")).toHaveText("Flats in Ambattur.A space to belong.");
   await page.goto("/about");
   await expect(page.locator("#about-story")).toContainText("real estate company in Ambattur");
   await page.goto("/projects");
-  await expect(page.locator(".sp-promo-copy")).toContainText("new apartments in Chennai");
+  await expect(page.locator(".sp-promo-copy")).toContainText("new apartments in Ambattur");
   await page.goto("/services");
-  await expect(page.locator("#building-contractor")).toContainText("Villa construction in Chennai");
-  await page.getByRole("button", { name: "What is the villa construction cost per sq ft in Chennai?" }).click();
+  await expect(page.locator("#building-contractor")).toContainText("Villa construction in Ambattur");
+  await page.getByRole("button", { name: "What is the villa construction cost per sq ft in Ambattur?" }).click();
   await expect(page.getByText("The estimate depends on your plot", { exact: false })).toBeVisible();
   await page.goto("/ambattur");
   await expect(page).toHaveTitle("Apartments for Sale in Ambattur | SP Properties");

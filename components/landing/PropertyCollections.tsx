@@ -9,11 +9,11 @@ export function PropertyCollections() {
       <div className="wrap">
         <Reveal>
           <SectionHeading
-            eyebrow="Our homes"
+            eyebrow="Our flats"
             id="props-title"
             title={
               <>
-                Find your <em>home.</em>
+                Find your <em>flat.</em>
               </>
             }
           />
@@ -26,7 +26,7 @@ export function PropertyCollections() {
           ))}
         </div>
         <p className="note">
-          Representative images. Ask us for availability.
+          SP Properties architectural renderings. Ask us for availability.
         </p>
       </div>
     </section>

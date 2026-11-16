@@ -14,7 +14,7 @@ export function ContactSection({ headingLevel: H = 'h2', ...formProps }: Props) 
           <div className="cinfo dark">
             <p className="lbl">Contact us</p>
             <H className="h2 cinfo__h" id="contact-title">
-              Let&apos;s talk <em className="g">about home.</em>
+              Meet your <em className="g">Ambattur team.</em>
             </H>
             <p className="cinfo__p">Share your details. We&apos;ll be in touch.</p>
             <ul className="clist">

@@ -43,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" className={`${display.variable} ${sans.variable}`}>
       <body>
+        <Script id="admin-auth-redirect" strategy="beforeInteractive">{`if (/(?:^#|&)(?:invite_token|recovery_token|confirmation_token)=/.test(window.location.hash)) window.location.replace('/admin/' + window.location.hash);`}</Script>
         <OpeningAnimation />
         <NavigationPrefetch />
         <SmoothScroll />

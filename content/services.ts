@@ -13,28 +13,28 @@ export const services: Service[] = [
   {
     slug: "flat-developers",
     title: "Flat development",
-    summary: "Thoughtfully planned 2 and 3 BHK apartments across Chennai.",
-    description: "Explore 2 & 3 BHK flats in Ambattur and across Chennai.",
-    includes: ["11 Chennai locations", "Layouts and site visits"],
-    image: "/images/services/flats.webp",
-    imageAlt: "Illustrative low-rise Chennai apartment development with shaded balconies and a paved frontage",
+    summary: "Thoughtfully planned 2 and 3 BHK apartments in Ambattur and beyond.",
+    description: "Explore 2 & 3 BHK flats in Ambattur and other locations.",
+    includes: ["Ambattur + 10 locations", "Layouts and site visits"],
+    image: "/images/projects/ambattur-flats.webp",
+    imageAlt: "SP Properties apartment exterior rendering in Ambattur with balconies and stone finishes",
     cta: { label: "Explore our flats", href: "/projects" },
   },
   {
     slug: "building-contractor",
     title: "House construction",
     summary: "Plan and build your home with a team you can meet.",
-    description: "Villa construction in Chennai and house construction in Ambattur, from planning to handover.",
+    description: "Villa construction in Ambattur, from planning and materials to handover.",
     includes: ["Plot and budget review", "Planning and progress updates"],
-    image: "/images/services/construction.webp",
-    imageAlt: "Illustrative engineers reviewing plans at a low-rise house construction site in Chennai",
+    image: "/images/services/apartment-construction-three-floors.webp",
+    imageAlt: "Illustration of two engineers reviewing plans in front of a three-floor apartment building under construction, presented by SP Properties, Ambattur",
     cta: { label: "Plan your build", href: "/contact" },
   },
   {
     slug: "interior-services",
     title: "Interior services",
     summary: "Interiors shaped around your home and everyday life.",
-    description: "Home interior planning in Chennai, shaped around your style and budget.",
+    description: "Apartment interior planning in Ambattur, shaped around your style and budget.",
     includes: ["Room layouts", "Materials and finishes"],
     image: "/images/services/interiors.webp",
     imageAlt: "Illustrative interior planning for a practical Indian family living and dining room",
@@ -44,7 +44,7 @@ export const services: Service[] = [
     slug: "joint-venture",
     title: "Joint ventures",
     summary: "Explore the development possibilities for your land.",
-    description: "Explore a residential development partnership for your land in Chennai.",
+    description: "Explore a residential development partnership for your land in Ambattur and surrounding areas.",
     includes: ["Site feasibility review", "Individual partnership terms"],
     image: "/images/services/jointventure.webp",
     imageAlt: "Illustrative landowner consultation with site drawings and a residential development model",
@@ -54,14 +54,14 @@ export const services: Service[] = [
 
 export const process = [
   { title: "Tell us what you need", text: "Location, size and budget, on WhatsApp or the enquiry form." },
-  { title: "Get matching options", text: "We share projects that fit your preferred location and home size." },
-  { title: "Visit the site", text: "Meet our team and see the home in person." },
-  { title: "Book your home", text: "We guide you through the next steps." },
+  { title: "Get matching options", text: "We share projects that fit your preferred location and flat size." },
+  { title: "Visit the site", text: "Meet our team and see the flat in person." },
+  { title: "Book your flat", text: "We guide you through the next steps." },
 ];
 
 export const reasons = [
   { title: "Local to Ambattur", text: "Our office is in Kallikuppam, Ambattur. We know the area." },
-  { title: "10 years of experience", text: "A decade of building homes in Chennai." },
+  { title: "10 years of experience", text: "A decade of building flats, with roots in Ambattur." },
   { title: "Clear guidance", text: "Get straightforward answers from a team you can meet in person." },
   { title: "Easy to reach", text: "WhatsApp, call or book a site visit, any day." },
 ];
@@ -75,8 +75,8 @@ export const serviceProcess = [
 ];
 
 export const serviceFaqs = [
-  { q: "Can you build a home on my plot?", a: "Yes. Share your Chennai plot location and requirements so we can discuss house or villa construction." },
+  { q: "Can you build a home on my plot?", a: "Yes. Share your plot location in Ambattur or the surrounding areas and requirements so we can discuss house or villa construction." },
   { q: "Can I discuss interiors as a separate service?", a: "Yes. We can discuss room layouts, materials and finishes for your home." },
   { q: "What should I prepare for a joint venture discussion?", a: "Bring your land location, site dimensions and available property documents." },
-  { q: "What is the villa construction cost per sq ft in Chennai?", a: "The estimate depends on your plot, floor area, design and finishes. Share your budget and requirements for a scope-based quote." },
+  { q: "What is the villa construction cost per sq ft in Ambattur?", a: "The estimate depends on your plot, floor area, design and finishes. Share your budget and requirements for a scope-based quote." },
 ];

@@ -51,16 +51,16 @@ export function ClientStories() {
           <div className="stories-hero">
             <div className="stories-hero-copy">
               <p className="stories-kicker">SP Properties testimonials</p>
-              <h1 id="stories-title">More than homes.<br /><em>People, first.</em></h1>
-              <p className="stories-intro">Choosing a home is personal. Meet the Chennai families who are part of our journey, and discover how we can help with yours.</p>
+              <h1 id="stories-title">Our client stories.<br /><em>Rooted in Ambattur.</em></h1>
+              <p className="stories-intro">Choosing a flat is personal. Meet the families who are part of our journey, and discover how our Ambattur team can help with yours.</p>
               <div className="stories-hero-actions">
                 <a href="#client-stories" className="stories-button">Meet our clients <ArrowDown size={17} aria-hidden="true" /></a>
                 <a href="#your-priorities" className="stories-text-link">Your home, your needs <ArrowUpRight size={17} aria-hidden="true" /></a>
               </div>
               <div className="stories-facts" aria-label="About SP Properties">
                 <div><strong>{site.experienceYears}<span> years</span></strong><span>Local experience</span></div>
-                <div><strong>{projects.length}<span> locations</span></strong><span>Across Chennai</span></div>
-                <div><strong>2 &amp; 3<span> BHK</span></strong><span>Homes to explore</span></div>
+                <div><strong>{projects.length}<span> locations</span></strong><span>Ambattur & beyond</span></div>
+                <div><strong>2 &amp; 3<span> BHK</span></strong><span>Flats to explore</span></div>
               </div>
             </div>
             <div className="stories-hero-visual" id={featured.id}>
@@ -84,7 +84,7 @@ export function ClientStories() {
       <section className="stories-collection" id="client-stories" aria-labelledby="stories-collection-title">
         <Container>
           <div className="stories-section-heading">
-            <div><p className="stories-kicker">The people behind our homes</p><h2 id="stories-collection-title">Familiar faces.<br /><em>Meaningful moments.</em></h2></div>
+            <div><p className="stories-kicker">The people behind our flats</p><h2 id="stories-collection-title">Familiar faces.<br /><em>Meaningful moments.</em></h2></div>
             <p>A glimpse of the families and connections at the heart of SP Properties.</p>
           </div>
           <div className="stories-gallery">

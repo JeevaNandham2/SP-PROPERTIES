@@ -86,13 +86,13 @@ test("home follow-ups retain location and configuration", () => {
   assert.equal(first.context?.location, "Ambattur");
   assert.equal(first.context?.bhk, "2");
   const price = reply("What is the price?", first.context);
-  assert.match(price.text, /2 BHK homes in Ambattur/);
+  assert.match(price.text, /2 BHK flats in Ambattur/);
   assert.doesNotMatch(price.text, /\d+\s*(lakhs?|crores?)/i);
   const brochure = reply("Floor plans", price.context);
   assert.match(brochure.text, /2 BHK.*Ambattur/);
   assert.equal(brochure.action, "whatsapp");
   const differentSize = reply("3 BHK", first.context);
-  assert.match(differentSize.text, /3 BHK homes in Ambattur/);
+  assert.match(differentSize.text, /3 BHK flats in Ambattur/);
 });
 
 test("brochure and service location selections keep the enquiry intent", () => {
@@ -146,7 +146,7 @@ test("common service and home enquiry phrasing remains in scope", () => {
   for (const input of ["What are your services?", "Tell me about your services", "Which services are offered?"]) {
     assert.ok(reply(input).quick.includes("Construction services"), input);
   }
-  assert.match(reply("Any units in Ambattur?").text, /homes in Ambattur/);
+  assert.match(reply("Any units in Ambattur?").text, /flats in Ambattur/);
   assert.notEqual(reply("Do you sell houses?").text, FALLBACK);
   assert.notEqual(reply("What are your charges?").text, FALLBACK);
 });

@@ -3,3 +3,21 @@
 
 /opengraph-image
   Content-Type: image/png
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, must-revalidate
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+
+/admin
+  X-Robots-Tag: noindex, nofollow
+
+/content-version.json
+  X-Robots-Tag: noindex
+  Cache-Control: no-cache, must-revalidate
+
+/images/managed/*
+  Cache-Control: public, max-age=31536000, immutable
