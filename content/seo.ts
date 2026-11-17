@@ -1,4 +1,4 @@
-import type { Project } from "./projects";
+import { projects as projectList, type Project } from "./projects";
 
 /** Page intent and search wording. Keywords belong in useful copy, not a meta-keywords tag. */
 export const pageSeo = {
@@ -14,7 +14,7 @@ export const pageSeo = {
   },
   projects: {
     title: "2 & 3 BHK Flats in Ambattur & Beyond | SP Properties",
-    description: "Find 2 & 3 BHK flats in Ambattur and explore 11 locations with SP Properties. Ask our Ambattur team for current availability, floor plans and site visits.",
+    description: `Find 2 & 3 BHK flats in Ambattur and explore ${new Set(projectList.map(project => project.location)).size} locations with SP Properties. Ask our team for availability, floor plans and site visits.`,
     keyword: "2 & 3 BHK flats in Ambattur",
   },
   services: {
@@ -31,6 +31,11 @@ export const pageSeo = {
     title: "Apartments for Sale in Ambattur | SP Properties",
     description: "Explore residential apartments in Ambattur with SP Properties. Compare 2 & 3 BHK flats, ask about prices and availability, or plan house construction.",
     keyword: "apartments for sale in Ambattur",
+  },
+  chennai: {
+    title: "Flats & Construction in Chennai | SP Properties",
+    description: "Explore Chennai flat locations or discuss house construction, interiors and joint ventures with SP Properties. Meet our local team in Ambattur.",
+    keyword: "flats and construction in Chennai",
   },
   testimonials: {
     title: "SP Properties Testimonials | Builders in Ambattur",

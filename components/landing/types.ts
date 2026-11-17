@@ -2,13 +2,12 @@ export type Bhk = 2 | 3;
 
 export interface Configuration {
   bhk: Bhk;
-  /** Starting price in lakhs (₹). 100 lakhs = ₹1 crore. */
-  priceLakhs: number;
 }
 
 export interface Location {
   slug: string;
   name: string;
+  location: string;
   image: string;
   imageAlt?: string;
   configurations: Configuration[];

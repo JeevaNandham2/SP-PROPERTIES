@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Omit lastModified until genuine per-page update dates are tracked.
-  const pages = ["", "/about", "/projects", "/services", "/testimonials", "/contact", "/ambattur"].map((p) => ({
+  const pages = ["", "/about", "/projects", "/services", "/testimonials", "/contact", "/ambattur", "/chennai"].map((p) => ({
     url: `${site.url}${p}`,
     changeFrequency: "weekly" as const,
     priority: p === "" ? 1 : p === "/ambattur" || p === "/projects" ? 0.9 : 0.7,

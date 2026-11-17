@@ -22,7 +22,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
       </div>
       <div className="flex flex-1 flex-col p-6 md:p-7">
         <span className="self-start rounded-sm bg-soft px-2.5 py-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-navy">
-          {project.configurations.map((c) => `${c.bhk} BHK`).join(" · ")}
+          {project.configurations.map((c) => `${c.bhk} BHK`).join(" & ")} flats
         </span>
         <h3 className="mb-0.5 mt-2.5 font-display text-[30px] font-medium text-ink">{project.location}</h3>
         <p className="mb-3.5 text-sm text-muted">{project.name ? project.name : "SP Properties · Ambattur"}</p>

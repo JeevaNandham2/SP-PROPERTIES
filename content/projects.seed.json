@@ -89,6 +89,9 @@
     "location": "Ayyapakkam",
     "configurations": [
       {
+        "bhk": 2
+      },
+      {
         "bhk": 3
       }
     ],
@@ -113,6 +116,9 @@
     "configurations": [
       {
         "bhk": 2
+      },
+      {
+        "bhk": 3
       }
     ],
     "image": "/images/projects/perambur-flats.webp",
@@ -136,6 +142,9 @@
     "configurations": [
       {
         "bhk": 2
+      },
+      {
+        "bhk": 3
       }
     ],
     "image": "/images/projects/korattur-flats.webp",
@@ -184,6 +193,9 @@
     "location": "Anna Nagar",
     "configurations": [
       {
+        "bhk": 2
+      },
+      {
         "bhk": 3
       }
     ],
@@ -208,6 +220,9 @@
     "configurations": [
       {
         "bhk": 2
+      },
+      {
+        "bhk": 3
       }
     ],
     "image": "/images/projects/maduravoyal-flats.webp",
@@ -231,6 +246,9 @@
     "configurations": [
       {
         "bhk": 2
+      },
+      {
+        "bhk": 3
       }
     ],
     "image": "/images/projects/koyambedu-flats.webp",
@@ -252,6 +270,9 @@
     "slug": "flats-in-kovur",
     "location": "Kovur",
     "configurations": [
+      {
+        "bhk": 2
+      },
       {
         "bhk": 3
       }

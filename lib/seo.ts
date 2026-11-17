@@ -37,7 +37,7 @@ export function businessSchema() {
       addressCountry: site.address.country,
     },
     // Publish exact coordinates only after the office map pin is confirmed.
-    areaServed: locations,
+    areaServed: [...new Set(["Chennai", ...locations])],
     sameAs: [site.socials.instagram, site.socials.facebook].filter(Boolean),
   };
 }

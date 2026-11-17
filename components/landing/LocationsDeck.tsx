@@ -123,7 +123,7 @@ export function LocationsDeck() {
                           target="_blank"
                           rel="noopener noreferrer"
                           href={whatsappLink(
-                            `Hi SP Properties, please share details of your ${bhkLabel(loc.configurations)} flats in ${loc.name}.`,
+                            `Hi SP Properties, please share details of your ${bhkLabel(loc.configurations)} flats in ${loc.location}.`,
                           )}
                         >
                           Enquire

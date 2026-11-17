@@ -17,6 +17,7 @@ export function Footer() {
           <ul className="grid gap-2.5 text-[15px]">
             {nav.map((n) => (<li key={n.href}><Link className="text-white hover:text-gold-hover" href={n.href}>{n.label}</Link></li>))}
             <li><Link className="text-white hover:text-gold-hover" href="/ambattur">Our Ambattur team</Link></li>
+            <li><Link className="text-white hover:text-gold-hover" href="/chennai">Flats &amp; construction in Chennai</Link></li>
           </ul>
         </div>
         <div>

@@ -2,9 +2,9 @@ import { expect, test } from "@playwright/test";
 import { projects } from "../../content/projects";
 import { site } from "../../content/site";
 
-const pages = ["/", "/about", "/projects", "/services", "/testimonials", "/contact", "/ambattur", ...projects.map((p) => `/projects/${p.slug}`)];
+const pages = ["/", "/about", "/projects", "/services", "/testimonials", "/contact", "/ambattur", "/chennai", ...projects.map((p) => `/projects/${p.slug}`)];
 
-test("all 18 public pages have unique SEO metadata and working crawlable links", async ({ page, request }) => {
+test("all public pages have unique SEO metadata and working crawlable links", async ({ page, request }) => {
   test.setTimeout(120_000);
   const titles = new Set<string>();
   const descriptions = new Set<string>();
@@ -23,13 +23,12 @@ test("all 18 public pages have unique SEO metadata and working crawlable links",
     const title = await page.title();
     const description = (await page.locator('meta[name="description"]').getAttribute("content"))!;
     expect(title, path).toContain("SP Properties");
-    if (!path.startsWith("/projects/")) expect(title, path).toContain("Ambattur");
+    if (path === "/chennai") expect(title, path).toContain("Chennai");
+    else if (!path.startsWith("/projects/")) expect(title, path).toContain("Ambattur");
     expect(description, path).toContain("Ambattur");
-    expect(title, path).not.toMatch(/\bChennai\b|\bhomes\b/i);
+    expect(title, path).not.toMatch(/\bhomes\b/i);
     await expect(page.locator("main"), path).not.toContainText(/\bhomes\b/i);
     await expect(page.locator("footer"), path).not.toContainText(/\bhomes\b/i);
-    await expect(page.locator("main"), path).not.toContainText(/\bChennai\b/i, { useInnerText: true });
-    await expect(page.locator("footer"), path).not.toContainText(/\bChennai\b/i, { useInnerText: true });
     expect(description.length, path).toBeGreaterThan(50);
     expect(titles.has(title), `Duplicate title on ${path}`).toBe(false);
     expect(descriptions.has(description), `Duplicate description on ${path}`).toBe(false);
@@ -84,7 +83,7 @@ for (const width of [320, 390, 1440]) {
     await page.emulateMedia({ reducedMotion: "reduce" });
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
-    for (const path of ["/about", "/services", "/testimonials", "/contact", "/ambattur", "/projects", "/projects/flats-in-thirumullaivoyal"]) {
+    for (const path of ["/about", "/services", "/testimonials", "/contact", "/ambattur", "/chennai", "/projects", "/projects/flats-in-thirumullaivoyal"]) {
       await page.goto(path);
       await expect(page.locator("h1")).toBeVisible();
       await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), { message: path }).toBe(true);
